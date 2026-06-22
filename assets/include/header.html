@@ -1,108 +1,88 @@
 <!-- Header -->
 
 <div class="container">
+  <nav class="navbar navbar-expand-lg">
+    <!-- Logo -->
+    <a class="navbar-brand edu-logo" href="#">
+      <img src="assets/media/logo.jpeg" alt="" />
+      <span>StudyCapsule</span>
+    </a>
 
-    <nav class="navbar navbar-expand-lg">
+    <!-- Toggle -->
+    <button
+      class="navbar-toggler border-0 shadow-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+    >
+      <i class="bi bi-grid"></i>
+    </button>
 
-        <!-- Logo -->
-        <a class="navbar-brand edu-logo" href="#">
-            <img src="assets/media/logo.jpeg" alt="">
-            <span>StudyCapsule</span>
-        </a>
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html"> Home </a>
+        </li>
 
-        <!-- Toggle -->
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-            data-bs-target="#mainNav">
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"> About Us </a>
+        </li>
 
-            <i class="bi bi-grid"></i>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            data-bs-toggle="dropdown"
+          >
+            Courses
+          </a>
 
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item anchor" href="notes.html"> Class 10 </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item anchor" href="notes.html"> Class 11 </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item anchor" href="notes.html"> Class 12 </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="notes.html"> Notes </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="pyqs.html"> PYQs </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"> Blog </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"> Contact </a>
+        </li>
+      </ul>
+
+      <div class="header-actions">
+        <button
+          class="icon-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#globalSearchModal"
+        >
+          <i class="bi bi-search"></i>
         </button>
 
-        <!-- Menu -->
-        <div class="collapse navbar-collapse" id="mainNav">
-
-            <ul class="navbar-nav mx-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown">
-
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-
-                        Courses
-
-                    </a>
-
-                    <ul class="dropdown-menu">
-
-                        <li>
-                            <a class="dropdown-item anchor" href="notes.html">
-                                Class 10
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item anchor" href="notes.html">
-                                Class 11
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item anchor" href="notes.html">
-                                Class 12
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="notes.html">
-                        Notes
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Mock Tests
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        PYQs
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Blog
-                    </a>
-                </li>
-
-            </ul>
-
-            <div class="header-actions">
-
-                <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#globalSearchModal">
-                    <i class="bi bi-search"></i>
-                </button>
-
-                <a href="#" class="main-btn">
-                    Log In
-                </a>
-
-            </div>
-
-        </div>
-
-    </nav>
-
+        <a href="#" class="main-btn"> Log In </a>
+      </div>
+    </div>
+  </nav>
 </div>
 
 <!-- Header -->
