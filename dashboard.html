@@ -1,0 +1,544 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>StudyCapsule</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom Css File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<style>
+    .account-dashboard {
+        background: #f8fafc;
+    }
+
+    .dashboard-sidebar {
+        background: #fff;
+        border-radius: 20px;
+        padding: 25px;
+        border: 1px solid var(--border);
+        position: sticky;
+        top: 20px;
+    }
+
+    .user-card {
+        text-align: center;
+        padding-bottom: 25px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .user-avatar {
+        width: 90px;
+        height: 90px;
+        margin: auto;
+        border-radius: 50%;
+        background: linear-gradient(135deg,
+                var(--primary),
+                #0049bf);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .user-card h5 {
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .user-card p {
+        color: var(--text);
+        margin: 0;
+    }
+
+    .dashboard-menu {
+        margin-top: 25px;
+        gap: 10px;
+    }
+
+    .dashboard-menu button,
+    .dashboard-menu a {
+        width: 100%;
+        border: none;
+        background: #fff;
+        text-decoration: none;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 18px;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: .3s;
+    }
+
+    .dashboard-menu button:hover,
+    .dashboard-menu button.active,
+    .dashboard-menu a:hover {
+        background: var(--primary);
+        color: #fff;
+    }
+
+    .welcome-box {
+        background: #fff;
+        border-radius: 20px;
+        padding: 30px;
+        border: 1px solid var(--border);
+    }
+
+    .welcome-box h3 {
+        color: var(--primary);
+        font-weight: 700;
+    }
+
+    .stats-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 25px;
+        text-align: center;
+        border: 1px solid var(--border);
+        transition: .3s;
+    }
+
+    .stats-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .stats-card i {
+        font-size: 30px;
+        color: var(--secondary);
+    }
+
+    .stats-card h3 {
+        margin: 10px 0;
+        color: var(--primary);
+        font-weight: 800;
+    }
+
+    .dashboard-box {
+        background: #fff;
+        border-radius: 20px;
+        padding: 25px;
+        border: 1px solid var(--border);
+    }
+
+    .box-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 20px;
+    }
+
+    .download-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+
+    .download-btn {
+        background: var(--secondary);
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .address-card {
+        border: 1px solid var(--border);
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .btn-edit,
+    .save-btn {
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 12px;
+        font-weight: 600;
+    }
+
+    .form-control,
+    .form-select {
+        height: 55px;
+        border-radius: 12px;
+    }
+
+    @media(max-width:991px) {
+
+        .dashboard-sidebar {
+            position: relative;
+            top: 0;
+        }
+
+    }
+
+    @media(max-width:576px) {
+
+        .download-item {
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .welcome-box,
+        .dashboard-box,
+        .stats-card {
+            padding: 20px;
+        }
+
+    }
+</style>
+
+<body>
+
+    <!-- Header -->
+    <header class="edu-header" id="header"></header>
+    <!-- Header -->
+
+    <main>
+
+        <section class="account-dashboard py-5">
+            <div class="container">
+
+                <div class="row g-4">
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-3">
+                        <div class="dashboard-sidebar">
+
+                            <div class="user-card">
+                                <div class="user-avatar">
+                                    <i class="bi bi-person-fill"></i>
+                                </div>
+
+                                <h5>Rakesh Kumar</h5>
+                                <p>Student Account</p>
+                            </div>
+
+                            <ul class="dashboard-menu nav flex-column" id="dashboardTabs">
+
+                                <li>
+                                    <button class="active" data-bs-toggle="tab" data-bs-target="#dashboard">
+                                        <i class="bi bi-grid"></i>
+                                        Dashboard
+                                    </button>
+                                </li>
+
+                                <li>
+                                    <button data-bs-toggle="tab" data-bs-target="#orders">
+                                        <i class="bi bi-bag-check"></i>
+                                        Orders
+                                    </button>
+                                </li>
+
+                                <li>
+                                    <button data-bs-toggle="tab" data-bs-target="#downloads">
+                                        <i class="bi bi-download"></i>
+                                        Downloads
+                                    </button>
+                                </li>
+
+
+                                <li>
+                                    <button data-bs-toggle="tab" data-bs-target="#profile">
+                                        <i class="bi bi-person-gear"></i>
+                                        Personal Details
+                                    </button>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="bi bi-box-arrow-right"></i>
+                                        Log Out
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-9">
+
+                        <div class="tab-content">
+
+                            <!-- Dashboard -->
+                            <div class="tab-pane fade show active" id="dashboard">
+
+                                <div class="welcome-box">
+                                    <h3>Welcome Back 👋</h3>
+                                    <p>
+                                        Manage your orders, downloads and account
+                                        information from your StudyCapsule dashboard.
+                                    </p>
+                                </div>
+
+                                <div class="row g-4 mt-1">
+
+                                    <div class="col-md-4">
+                                        <div class="stats-card">
+                                            <i class="bi bi-bag-check"></i>
+                                            <h3>12</h3>
+                                            <span>Total Orders</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="stats-card">
+                                            <i class="bi bi-download"></i>
+                                            <h3>28</h3>
+                                            <span>Downloads</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="stats-card">
+                                            <i class="bi bi-book"></i>
+                                            <h3>15</h3>
+                                            <span>Study Notes</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="dashboard-box mt-4">
+
+                                    <div class="box-title">
+                                        Recent Orders
+                                    </div>
+
+                                    <div class="table-responsive">
+
+                                        <table class="table align-middle">
+
+                                            <thead>
+                                                <tr>
+                                                    <th>Order</th>
+                                                    <th>Date</th>
+                                                    <th>Status</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                                <tr>
+                                                    <td>#SC1205</td>
+                                                    <td>20 Jun 2026</td>
+                                                    <td>
+                                                        <span class="badge bg-success">
+                                                            Completed
+                                                        </span>
+                                                    </td>
+                                                    <td>₹399</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>#SC1198</td>
+                                                    <td>15 Jun 2026</td>
+                                                    <td>
+                                                        <span class="badge bg-warning">
+                                                            Pending
+                                                        </span>
+                                                    </td>
+                                                    <td>₹249</td>
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Orders -->
+                            <div class="tab-pane fade" id="orders">
+
+                                <div class="dashboard-box">
+                                    <div class="box-title">My Orders</div>
+
+                                    <div class="table-responsive">
+
+                                        <table class="table align-middle">
+
+                                            <thead>
+                                                <tr>
+                                                    <th>Order ID</th>
+                                                    <th>Product</th>
+                                                    <th>Price</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                                <tr>
+                                                    <td>#SC1205</td>
+                                                    <td>Class 12 Physics Notes</td>
+                                                    <td>₹399</td>
+                                                    <td>
+                                                        <span class="badge bg-success">
+                                                            Completed
+                                                        </span>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Downloads -->
+                            <div class="tab-pane fade" id="downloads">
+
+                                <div class="dashboard-box">
+                                    <div class="box-title">
+                                        Downloads
+                                    </div>
+
+                                    <div class="download-item">
+
+                                        <div>
+                                            <h6>Class 12 Physics Notes</h6>
+                                            <small>Purchased Product</small>
+                                        </div>
+
+                                        <a href="#" class="download-btn">
+                                            Download
+                                        </a>
+
+                                    </div>
+
+                                    <div class="download-item">
+
+                                        <div>
+                                            <h6>Chemistry Mind Maps</h6>
+                                            <small>Purchased Product</small>
+                                        </div>
+
+                                        <a href="#" class="download-btn">
+                                            Download
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Profile -->
+                            <div class="tab-pane fade" id="profile">
+
+                                <div class="dashboard-box">
+
+                                    <div class="box-title">
+                                        Personal Details
+                                    </div>
+
+                                    <form>
+
+                                        <div class="row g-3">
+
+                                            <div class="col-md-6">
+                                                <label>Full Name</label>
+                                                <input type="text" class="form-control" value="Rakesh Kumar">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                                <input type="email" class="form-control" value="example@gmail.com">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                                <input type="text" class="form-control" value="+91 9876543210">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label>Class</label>
+                                                <select class="form-select">
+                                                    <option>Class 10</option>
+                                                    <option>Class 11</option>
+                                                    <option selected>
+                                                        Class 12
+                                                    </option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <button class="save-btn mt-4">
+                                            Save Changes
+                                        </button>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+    <!-- Custom Js File -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

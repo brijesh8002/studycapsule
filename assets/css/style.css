@@ -2051,6 +2051,11 @@ FINAL CTA
   font-weight: 800;
   color: var(--primary);
 }
+.section-heading h3 {
+  font-size: clamp(1.5rem, 5vw, 1rem);
+  font-weight: 800;
+  color: var(--primary);
+}
 
 .section-heading h2 span {
   color: var(--secondary);
@@ -3665,6 +3670,9 @@ FINAL CTA
   .section-heading h2 {
     font-size: clamp(1rem, 5vw, 2rem);
   }
+  .section-heading h3 {
+  font-size: clamp(1rem, 5vw, 1rem);
+}
 
   /* index faq section */
   /* about us page css */
