@@ -1,0 +1,384 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>StudyCapsule</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom Css File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+
+<body>
+
+    <!-- Header -->
+    <header class="edu-header" id="header"></header>
+    <!-- Header -->
+
+    <main>
+
+
+
+    <!-- Background Shapes -->
+
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Auth Section -->
+
+    <section class="auth-section">
+
+        <div class="container">
+
+            <div class="auth-wrapper">
+
+                <!-- LEFT PANEL -->
+
+                <div class="auth-left">
+
+                    <div class="auth-left-content">
+
+                        <span class="auth-badge">
+                            CBSE Classes 10-12
+                        </span>
+
+                        <h1>
+                            Learn Smarter with StudyCapsule
+                        </h1>
+
+                        <p>
+                            Premium Notes, Mind Maps, PYQs and Smart Revision
+                            Materials designed to help students score better.
+                        </p>
+
+                        <!-- Features -->
+
+                        <div class="auth-features">
+
+                            <div class="feature-item">
+                                <i class="bi bi-journal-check"></i>
+                                <span>500+ Premium Notes</span>
+                            </div>
+
+                            <div class="feature-item">
+                                <i class="bi bi-lightning-charge"></i>
+                                <span>Instant PDF Access</span>
+                            </div>
+
+                            <div class="feature-item">
+                                <i class="bi bi-award"></i>
+                                <span>Trusted by Students</span>
+                            </div>
+
+                        </div>
+
+                        <!-- Floating Cards -->
+
+                        <div class="floating-card card-one">
+                            📚 500+ Notes
+                        </div>
+
+                        <div class="floating-card card-two">
+                            ⭐ 4.9 Rating
+                        </div>
+
+                        <div class="floating-card card-three">
+                            🚀 Instant Access
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT PANEL -->
+
+                <div class="auth-right">
+
+                    <div class="auth-card">
+
+                        <!-- Logo -->
+
+                        <div class="auth-logo text-center">
+
+                            <a href="#">
+                                <img src="logo.png"
+                                    alt="StudyCapsule">
+                            </a>
+
+                            <h4>
+                                Welcome Back
+                            </h4>
+
+                            <p>
+                                Login or create your account
+                            </p>
+
+                        </div>
+
+                        <!-- Tabs -->
+
+                        <ul class="nav nav-pills auth-tabs mb-4">
+
+                            <li class="nav-item flex-fill">
+
+                                <button
+                                    class="nav-link active w-100"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#loginTab">
+
+                                    Login
+
+                                </button>
+
+                            </li>
+
+                            <li class="nav-item flex-fill">
+
+                                <button
+                                    class="nav-link w-100"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#registerTab">
+
+                                    Register
+
+                                </button>
+
+                            </li>
+
+                        </ul>
+
+                        <!-- Tab Content -->
+
+                        <div class="tab-content">
+
+                            <!-- LOGIN TAB -->
+
+                            <div class="tab-pane fade show active"
+                                id="loginTab">
+
+                                <form id="loginForm" class="auth-form" novalidate>
+
+```
+<!-- Email -->
+
+<div class="form-group mb-4">
+
+    <label class="form-label">
+        Email Address
+    </label>
+
+    <div class="input-group custom-input">
+
+        <span class="input-group-text">
+            <i class="bi bi-envelope"></i>
+        </span>
+
+        <input
+            type="email"
+            class="form-control"
+            id="loginEmail"
+            placeholder="Enter your email"
+            required>
+
+    </div>
+
+    <div class="invalid-feedback d-block">
+        Please enter a valid email address.
+    </div>
+
+</div>
+
+<!-- Password -->
+
+<div class="form-group mb-3">
+
+    <label class="form-label">
+        Password
+    </label>
+
+    <div class="input-group custom-input">
+
+        <span class="input-group-text">
+            <i class="bi bi-lock"></i>
+        </span>
+
+        <input
+            type="password"
+            class="form-control password-field"
+            id="loginPassword"
+            placeholder="Enter your password"
+            required>
+
+        <button
+            type="button"
+            class="input-group-text password-toggle">
+
+            <i class="bi bi-eye"></i>
+
+        </button>
+
+    </div>
+
+    <div class="invalid-feedback d-block">
+        Password is required.
+    </div>
+
+</div>
+
+<!-- Remember + Forgot -->
+
+<div class="auth-options">
+
+    <div class="form-check">
+
+        <input
+            class="form-check-input"
+            type="checkbox"
+            id="rememberMe">
+
+        <label
+            class="form-check-label"
+            for="rememberMe">
+
+            Remember Me
+
+        </label>
+
+    </div>
+
+    <button
+        type="button"
+        class="forgot-link"
+        data-bs-toggle="modal"
+        data-bs-target="#forgotPasswordModal">
+
+        Forgot Password?
+
+    </button>
+
+</div>
+
+<!-- Login Button -->
+
+<button
+    type="submit"
+    class="auth-btn login-btn">
+
+    <span>
+        Login To Account
+    </span>
+
+    <i class="bi bi-arrow-right"></i>
+
+</button>
+
+<!-- Divider -->
+
+<div class="auth-divider">
+
+    <span>
+        OR CONTINUE WITH
+    </span>
+
+</div>
+
+<!-- Google Login -->
+
+<button
+    type="button"
+    class="google-login-btn">
+
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+        width="20"
+        alt="Google">
+
+    <span>
+        Continue with Google
+    </span>
+
+</button>
+
+<!-- Security Badge -->
+
+<div class="auth-security">
+
+    <i class="bi bi-shield-lock"></i>
+
+    <span>
+        Secure SSL Protected Login
+    </span>
+
+</div>
+```
+
+</form>
+
+
+                            </div>
+
+                            <!-- REGISTER TAB -->
+
+                            <div class="tab-pane fade"
+                                id="registerTab">
+
+                                <!-- Step 3 Code Here -->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Forgot Password Modal -->
+
+    <!-- Step 4 -->
+
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+    <!-- Custom Js File -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
