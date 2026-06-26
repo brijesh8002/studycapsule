@@ -4545,7 +4545,7 @@ FINAL CTA
 
 .checkout-btn {
   width: 100%;
-  height: 58px;
+  height: 40px;
   border: none;
   border-radius: 14px;
   margin-top: 25px;
@@ -4553,6 +4553,9 @@ FINAL CTA
   color: white;
   font-weight: 700;
   transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkout-btn:hover {
