@@ -116,9 +116,9 @@
 
                             <div class="product-infos">
 
-                                <span class="product-tag">
-                                    Most Downloaded
-                                </span>
+                                <!-- <span class="product-tag">
+                                    Topper's Choice
+                                </span> -->
 
                                 <h1>
 
@@ -130,7 +130,7 @@
                                     </h3>
 
                                     <p>
-                                        Chapter-wise Notes, NCERT Solutions, Important Questions & PDF Downloads
+                                        Expert Created Content • Based On Latest CBSE Syllabus
                                     </p>
                                 </div>
 
@@ -144,7 +144,7 @@
 
                                     <span class="divider"></span>
 
-                                    <span>12K Downloads</span>
+                                    <span>2k Downloads</span>
 
                                 </div>
 
@@ -168,12 +168,12 @@
 
                                     <div class="feature">
                                         <i class="bi bi-file-earmark-pdf"></i>
-                                        125 PDF Pages
+                                        30 PDF Pages
                                     </div>
 
                                     <div class="feature">
                                         <i class="bi bi-book"></i>
-                                        25 Chapters
+                                        14 Chapters
                                     </div>
 
                                     <div class="feature">
@@ -190,7 +190,7 @@
 
                                 <!-- Included -->
 
-                                <div class="included-box">
+                                <!-- <div class="included-box">
 
                                     <h5>What's Included</h5>
 
@@ -208,11 +208,62 @@
 
                                     </ul>
 
+                                </div> -->
+
+
+
+                                <!-- Format -->
+                                <div class="option-group mb-4">
+                                    <h6 class="option-title">Choose Your Study Pack</h6>
+
+                                    <div class="option-list">
+
+                                        <input type="radio" name="format" id="printed" checked>
+                                        <label for="printed">Mind Maps Only</label>
+
+                                        <input type="radio" name="format" id="pdf">
+                                        <label for="pdf">Mind Maps + Notes</label>
+
+                                    </div>
                                 </div>
+
+                                <!-- Subject -->
+                                <div class="option-group mb-3">
+
+                                    <h6 class="option-title">Choose Your Subject</h6>
+
+                                    <div class="option-list">
+
+                                        <input type="checkbox" name="subject" id="science" checked>
+                                        <label for="science">Science</label>
+
+                                        <input type="checkbox" name="subject" id="sm">
+                                        <label for="sm">Science + Maths</label>
+
+                                        <input type="checkbox" name="subject" id="ss">
+                                        <label for="ss">Science + SST</label>
+
+                                        <input type="checkbox" name="subject" id="se">
+                                        <label for="se">Science + Eng</label>
+
+                                        <input type="checkbox" name="subject" id="mst">
+                                        <label for="mst">Maths + Science + SST</label>
+
+                                        <input type="checkbox" name="subject" id="mste">
+                                        <label for="mste">Maths + Science + SST + Eng</label>
+
+                                    </div>
+
+                                </div>
+
+
+
+
 
                                 <!-- Quantity -->
 
                                 <div class="quantity-wrapper">
+                                    <h6 class="option-title">Quantity</h6>
 
                                     <button>-</button>
 
@@ -1159,6 +1210,29 @@
 
     <!-- Custom Js File -->
     <script src="assets/js/script.js"></script>
+
+
+    <script>
+        const imageBox=document.querySelector(".main-product-image");
+const image=imageBox.querySelector("img");
+
+imageBox.addEventListener("mousemove",(e)=>{
+
+const rect=imageBox.getBoundingClientRect();
+
+const x=(e.clientX-rect.left)/rect.width*100;
+const y=(e.clientY-rect.top)/rect.height*100;
+
+image.style.transformOrigin=`${x}% ${y}%`;
+image.style.transform="scale(2.5)";
+});
+
+imageBox.addEventListener("mouseleave",()=>{
+
+image.style.transformOrigin="center";
+image.style.transform="scale(1)";
+});
+    </script>
 
 </body>
 

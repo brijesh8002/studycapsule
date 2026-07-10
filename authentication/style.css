@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --primary: #002d76;
+  --secondary: #F1A93A;
+  --dark: #0f172a;
+  --text: #475569;
+  --border: #e2e8f0;
+}
+
+.pd-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+.border-bbox{
+    background:  linear-gradient(45deg, var(--primary),var(--secondary));
+    border-radius: 25px;
+    padding: 30px;
+}
+
+
+.pd-contained{
+    max-width: 700px;
+    width: 100%;
+    /* height: 400px; */
+    background: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+
+}
+
+.pd-left-data{
+    position: relative;
+    width: 50%;
+}
+
+.pd-content{
+    position: absolute;
+    top: 40px;
+    width: 53%;
+    right: 0;
+    color: white;
+    padding: 10px;
+}
+.pd-content h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;      
+    font-weight: 700;
+}
+
+.pd-content p{
+    
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+
+}
+.pd-form{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+
+
+.pd-heading2{
+color: var(--primary);
+
+}
+.pd-heading3{
+    font-weight: 900;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pd-form form input{
+    height: 34px;
+    padding: 0 3%;
+    width: 94%;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.pd-form form input::placeholder{
+
+  font-family: system-ui;
+}
+
+#forgot {
+  margin-left: 120px;
+  margin-top: 8.5px;
+  font-family: system-ui;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#forgot a {
+  text-decoration: none;
+  color: #00376b;
+}
+
+
+
+
+.btn1{
+    background-color: var(--primary);
+    height: 32px;
+    width: 268px;
+    border-radius: 8px;
+    border: 0px #4cb5f9 ; 
+    color: white;  
+    font-family: system-ui;
+    font-size: medium;
+    font-weight: 600;
+}
+
+
+
+
+.pd-image1{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+
+
+.signup {
+  /* height: 60px;
+  width: 350px;
+  border: 1px solid #dbdbdb; */
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui;
+  font-size: 14px;
+}
+
+.signup a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: medium;
+  font-weight: 600;
+}
+
+
+
+/* signup form */
+
+
+
+
+/* fogot */
+#otp{
+    height: 34px;
+  width: 267px;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  font-size: 12px;
+  padding-top: 2px;
+}
+
+.btn4{
+    padding: 10px;
+    border-radius: 15px;
+    border: 0px ;
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+    
+}
+
+/* change password */
+
+
+.pd-form form{
+    width: 100%;
+}
+
+.pd-form input,
+.pd-form .btn1,
+.pd-form .btn4{
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .pd-left-data{
+        display: none;
+    }
+
+    .pd-form{
+        width: 100%;
+    }
+
+    .pd-contained{
+        width: 96%;
+        max-width: 400px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+}
