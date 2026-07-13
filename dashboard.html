@@ -22,196 +22,7 @@
 
 </head>
 
-<style>
-    .account-dashboard {
-        background: #f8fafc;
-    }
 
-    .dashboard-sidebar {
-        background: #fff;
-        border-radius: 20px;
-        padding: 25px;
-        border: 1px solid var(--border);
-        position: sticky;
-        top: 20px;
-    }
-
-    .user-card {
-        text-align: center;
-        padding-bottom: 25px;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .user-avatar {
-        width: 90px;
-        height: 90px;
-        margin: auto;
-        border-radius: 50%;
-        background: linear-gradient(135deg,
-                var(--primary),
-                #0049bf);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 35px;
-        margin-bottom: 15px;
-    }
-
-    .user-card h5 {
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
-
-    .user-card p {
-        color: var(--text);
-        margin: 0;
-    }
-
-    .dashboard-menu {
-        margin-top: 25px;
-        gap: 10px;
-    }
-
-    .dashboard-menu button,
-    .dashboard-menu a {
-        width: 100%;
-        border: none;
-        background: #fff;
-        text-decoration: none;
-        color: var(--dark);
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 14px 18px;
-        border-radius: 12px;
-        font-weight: 600;
-        transition: .3s;
-    }
-
-    .dashboard-menu button:hover,
-    .dashboard-menu button.active,
-    .dashboard-menu a:hover {
-        background: var(--primary);
-        color: #fff;
-    }
-
-    .welcome-box {
-        background: #fff;
-        border-radius: 20px;
-        padding: 30px;
-        border: 1px solid var(--border);
-    }
-
-    .welcome-box h3 {
-        color: var(--primary);
-        font-weight: 700;
-    }
-
-    .stats-card {
-        background: #fff;
-        border-radius: 20px;
-        padding: 25px;
-        text-align: center;
-        border: 1px solid var(--border);
-        transition: .3s;
-    }
-
-    .stats-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .stats-card i {
-        font-size: 30px;
-        color: var(--secondary);
-    }
-
-    .stats-card h3 {
-        margin: 10px 0;
-        color: var(--primary);
-        font-weight: 800;
-    }
-
-    .dashboard-box {
-        background: #fff;
-        border-radius: 20px;
-        padding: 25px;
-        border: 1px solid var(--border);
-    }
-
-    .box-title {
-        font-size: 22px;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 20px;
-    }
-
-    .download-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        border: 1px solid var(--border);
-        border-radius: 15px;
-        margin-bottom: 15px;
-    }
-
-    .download-btn {
-        background: var(--secondary);
-        color: #fff;
-        padding: 10px 18px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .address-card {
-        border: 1px solid var(--border);
-        padding: 20px;
-        border-radius: 15px;
-    }
-
-    .btn-edit,
-    .save-btn {
-        background: var(--primary);
-        color: #fff;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 12px;
-        font-weight: 600;
-    }
-
-    .form-control,
-    .form-select {
-        height: 55px;
-        border-radius: 12px;
-    }
-
-    @media(max-width:991px) {
-
-        .dashboard-sidebar {
-            position: relative;
-            top: 0;
-        }
-
-    }
-
-    @media(max-width:576px) {
-
-        .download-item {
-            flex-direction: column;
-            gap: 15px;
-            align-items: flex-start;
-        }
-
-        .welcome-box,
-        .dashboard-box,
-        .stats-card {
-            padding: 20px;
-        }
-
-    }
-</style>
 
 <body>
 
@@ -227,7 +38,7 @@
                 <div class="row g-4">
 
                     <!-- Sidebar -->
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 ">
                         <div class="dashboard-sidebar">
 
                             <div class="user-card">
@@ -239,24 +50,24 @@
                                 <p>Student Account</p>
                             </div>
 
-                            <ul class="dashboard-menu nav flex-column" id="dashboardTabs">
+                            <ul class="dashboard-menu main-menu nav flex-column" id="dashboardTabs">
 
                                 <li>
-                                    <button class="active" data-bs-toggle="tab" data-bs-target="#dashboard">
+                                    <button class="active" data-bs-toggle="tab" data-bs-target="#dashboard" onclick="toggleMenu()">
                                         <i class="bi bi-grid"></i>
                                         Dashboard
                                     </button>
                                 </li>
 
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#orders">
+                                    <button data-bs-toggle="tab" data-bs-target="#orders" onclick="toggleMenu()">
                                         <i class="bi bi-bag-check"></i>
                                         Orders
                                     </button>
                                 </li>
 
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#downloads">
+                                    <button data-bs-toggle="tab" data-bs-target="#downloads" onclick="toggleMenu()">
                                         <i class="bi bi-download"></i>
                                         Downloads
                                     </button>
@@ -264,7 +75,7 @@
 
 
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#profile">
+                                    <button data-bs-toggle="tab" data-bs-target="#profile" onclick="toggleMenu()">
                                         <i class="bi bi-person-gear"></i>
                                         Personal Details
                                     </button>
@@ -279,8 +90,12 @@
 
                             </ul>
 
+                            
+                            <button class="navside" onclick="toggleMenu()"><i class=" bi bi-list"></i></button>
                         </div>
                     </div>
+
+                    
 
                     <!-- Content -->
                     <div class="col-lg-9">
@@ -429,31 +244,303 @@
                                         Downloads
                                     </div>
 
-                                    <div class="download-item">
 
-                                        <div>
-                                            <h6>Class 12 Physics Notes</h6>
-                                            <small>Purchased Product</small>
+
+                                    <!-- Success Card -->
+                                    <div class="sc-success-card">
+
+                                        <div class="row align-items-center">
+
+                                            <div class="col-lg-1 col-md-2 text-center">
+                                                <div class="sc-success-icon">
+                                                    <i class="bi bi-check-lg"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-11 col-md-10">
+
+                                                <h3 class="sc-success-title">
+                                                    Payment Successful 🎉
+                                                </h3>
+
+                                                <p class="sc-success-text mb-0">
+                                                    Thank you for shopping with us. Your account has been charged
+                                                    successfully.
+                                                    We are processing your order. You can download your purchased study
+                                                    material below.
+                                                </p>
+
+                                            </div>
+
                                         </div>
-
-                                        <a href="#" class="download-btn">
-                                            Download
-                                        </a>
 
                                     </div>
 
-                                    <div class="download-item">
 
-                                        <div>
-                                            <h6>Chemistry Mind Maps</h6>
-                                            <small>Purchased Product</small>
+                                    <!-- Order Summary -->
+
+                                    <div class="sc-order-summary">
+
+                                        <div class="row g-4">
+
+                                            <div class="col-lg-3 col-md-6">
+
+                                                <div class="sc-summary-box">
+
+                                                    <div class="sc-summary-icon">
+                                                        <i class="bi bi-receipt"></i>
+                                                    </div>
+
+                                                    <span>Order Number</span>
+
+                                                    <h5>#976</h5>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6">
+
+                                                <div class="sc-summary-box">
+
+                                                    <div class="sc-summary-icon">
+                                                        <i class="bi bi-calendar-event"></i>
+                                                    </div>
+
+                                                    <span>Date</span>
+
+                                                    <h5>June 13, 2026</h5>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6">
+
+                                                <div class="sc-summary-box">
+
+                                                    <div class="sc-summary-icon">
+                                                        <i class="bi bi-wallet2"></i>
+                                                    </div>
+
+                                                    <span>Total</span>
+
+                                                    <h5>₹129.00</h5>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6">
+
+                                                <div class="sc-summary-box">
+
+                                                    <div class="sc-summary-icon">
+                                                        <i class="bi bi-credit-card-2-front"></i>
+                                                    </div>
+
+                                                    <span>Payment</span>
+
+                                                    <h5>UPI / Cards</h5>
+
+                                                </div>
+
+                                            </div>
+
                                         </div>
 
-                                        <a href="#" class="download-btn">
-                                            Download
-                                        </a>
+                                    </div>
+
+
+                                    <!-- Downloads -->
+
+                                    <div class="sc-main-card">
+
+                                        <div class="sc-card-header">
+
+                                            <h3>
+                                                <i class="bi bi-cloud-download me-2"></i>
+                                                Downloads
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="table-responsive">
+
+                                            <table class="table sc-download-table align-middle">
+
+                                                <thead>
+
+                                                    <tr>
+
+                                                        <th>Product</th>
+
+                                                        <th>Downloads Left</th>
+
+                                                        <th>Expires</th>
+
+                                                        <th class="text-end">Download</th>
+
+                                                    </tr>
+
+                                                </thead>
+
+                                                <tbody>
+
+                                                    <tr>
+
+                                                        <td>
+
+                                                            <div class="sc-product-info">
+
+                                                                <div class="sc-book-icon">
+                                                                    <i class="bi bi-journal-bookmark-fill"></i>
+                                                                </div>
+
+                                                                <div>
+
+                                                                    <h6>
+                                                                        CBSE Class 10 Maths Formula Sheet
+                                                                    </h6>
+
+                                                                    <span>
+                                                                        2026-27 | Digital PDF
+                                                                    </span>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        </td>
+
+                                                        <td>
+
+                                                            <span class="sc-badge blue">
+                                                                2 Downloads Left
+                                                            </span>
+
+                                                        </td>
+
+                                                        <td>
+
+                                                            <span class="sc-badge orange">
+                                                                June 14, 2026
+                                                            </span>
+
+                                                        </td>
+
+                                                        <td class="text-end">
+
+                                                            <a href="#" class="sc-download-btn">
+
+                                                                <i class="bi bi-download me-2"></i>
+
+                                                                Download PDF
+
+                                                            </a>
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                </tbody>
+
+                                            </table>
+
+                                        </div>
 
                                     </div>
+
+
+
+                                    <!-- Order Details -->
+
+                                    <div class="sc-main-card mt-5">
+
+                                        <div class="sc-card-header">
+
+                                            <h3>
+
+                                                <i class="bi bi-bag-check me-2"></i>
+
+                                                Order Details
+
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="table-responsive">
+
+                                            <table class="table sc-order-table">
+
+                                                <thead>
+
+                                                    <tr>
+
+                                                        <th>Product</th>
+
+                                                        <th class="text-end">Amount</th>
+
+                                                    </tr>
+
+                                                </thead>
+
+                                                <tbody>
+
+                                                    <tr>
+
+                                                        <td>
+
+                                                            CBSE Class 10 Maths Formula Sheet | 2026–27 |
+                                                            Digital E-book (PDF)
+                                                            <strong> × 1</strong>
+
+                                                        </td>
+
+                                                        <td class="text-end">
+
+                                                            ₹129.00
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td>
+                                                            Subtotal
+                                                        </td>
+
+                                                        <td class="text-end">
+                                                            ₹129.00
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr class="sc-total-row">
+
+                                                        <td>
+
+                                                            Total
+
+                                                        </td>
+
+                                                        <td class="text-end">
+
+                                                            ₹129.00
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                </tbody>
+
+                                            </table>
+
+                                        </div>
+
+                                    </div>
+
 
                                 </div>
 
