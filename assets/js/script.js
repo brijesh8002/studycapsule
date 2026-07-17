@@ -67,3 +67,222 @@ function toggleMenu() {
     document.querySelector(".navside").classList.toggle("active");
     
 }
+
+
+
+
+
+// Index Page Hero Section Carousel
+// Index Page Hero Section Carousel
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const cards = document.querySelectorAll(".orbit-card");
+    const prevBtn = document.querySelector(".orbit-prev");
+    const nextBtn = document.querySelector(".orbit-next");
+    const wrapper = document.querySelector(".orbit-wrapper");
+
+    let current = 0;
+    let autoPlay = null;
+
+    // ==========================
+    // UPDATE CAROUSEL
+    // ==========================
+
+    function updateCarousel() {
+
+        cards.forEach((card, index) => {
+
+            card.className = "orbit-card";
+
+            let offset = (index - current + cards.length) % cards.length;
+
+            switch (offset) {
+
+                case 0:
+                    card.classList.add("active");
+                    break;
+
+                case 1:
+                    card.classList.add("next");
+                    break;
+
+                case 2:
+                    card.classList.add("next2");
+                    break;
+
+                case cards.length - 1:
+                    card.classList.add("prev");
+                    break;
+
+                case cards.length - 2:
+                    card.classList.add("prev2");
+                    break;
+
+                default:
+                    card.classList.add("hidden");
+            }
+
+        });
+
+    }
+
+    // ==========================
+    // NEXT
+    // ==========================
+
+    function nextSlide() {
+
+        current++;
+
+        if (current >= cards.length) {
+
+            current = 0;
+
+        }
+
+        updateCarousel();
+
+    }
+
+    // ==========================
+    // PREVIOUS
+    // ==========================
+
+    function prevSlide() {
+
+        current--;
+
+        if (current < 0) {
+
+            current = cards.length - 1;
+
+        }
+
+        updateCarousel();
+
+    }
+
+    // ==========================
+    // AUTOPLAY
+    // ==========================
+
+    function startAuto() {
+
+        stopAuto();
+
+        autoPlay = setInterval(() => {
+
+            nextSlide();
+
+        }, 5000);
+
+    }
+
+    function stopAuto() {
+
+        if (autoPlay) {
+
+            clearInterval(autoPlay);
+
+            autoPlay = null;
+
+        }
+
+    }
+
+    // ==========================
+    // BUTTONS
+    // ==========================
+
+    if (nextBtn) {
+
+        nextBtn.addEventListener("click", () => {
+
+            nextSlide();
+
+            startAuto();
+
+        });
+
+    }
+
+    if (prevBtn) {
+
+        prevBtn.addEventListener("click", () => {
+
+            prevSlide();
+
+            startAuto();
+
+        });
+
+    }
+
+    // ==========================
+    // PAUSE ON HOVER
+    // ==========================
+
+    if (wrapper) {
+
+        wrapper.addEventListener("mouseenter", stopAuto);
+
+        wrapper.addEventListener("mouseleave", startAuto);
+
+    }
+
+    // ==========================
+    // TOUCH SWIPE
+    // ==========================
+
+    let startX = 0;
+    let endX = 0;
+
+    if (wrapper) {
+
+        wrapper.addEventListener("touchstart", (e) => {
+
+            startX = e.touches[0].clientX;
+
+        });
+
+        wrapper.addEventListener("touchmove", (e) => {
+
+            endX = e.touches[0].clientX;
+
+        });
+
+        wrapper.addEventListener("touchend", () => {
+
+            if (startX - endX > 60) {
+
+                nextSlide();
+
+                startAuto();
+
+            }
+
+            if (endX - startX > 60) {
+
+                prevSlide();
+
+                startAuto();
+
+            }
+
+        });
+
+    }
+
+    // ==========================
+    // START
+    // ==========================
+
+    updateCarousel();
+
+    startAuto();
+
+});
+
+
+

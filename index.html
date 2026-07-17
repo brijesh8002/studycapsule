@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,77 +22,14 @@
 
     <!-- Custom Css File -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header-footer.css">
+
 
 </head>
 
 <body>
 
-    <style>
-        :root {
-            --primary: #002d76;
-            --secondary: #F1A93A;
-            --dark: #0f172a;
-            --text: #475569;
-            --border: #e2e8f0;
-        }
 
-        /* Offer Marquee */
-        .offer-marquee {
-            background: var(--primary);
-            color: #fff;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            border-bottom: 2px solid var(--secondary);
-            height: 42px;
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: .4px;
-        }
-
-        .offer-track {
-            display: inline-flex;
-            width: max-content;
-            animation: marqueeMove 18s linear infinite;
-        }
-
-        .offer-track span {
-            padding-right: 120px;
-            color: #fff;
-        }
-
-        .offer-track span b {
-            color: var(--secondary);
-        }
-
-        .offer-marquee:hover .offer-track {
-            animation-play-state: paused;
-        }
-
-        @keyframes marqueeMove {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        /* Mobile */
-        @media (max-width:768px) {
-            .offer-marquee {
-                height: 38px;
-                font-size: 12px;
-            }
-
-            .offer-track span {
-                padding-right: 80px;
-            }
-        }
-    </style>
     <!-- Offer Marquee Bar -->
     <div class="offer-marquee">
         <div class="offer-track">
@@ -122,14 +62,10 @@
         <!-- Hero Section -->
         <section class="studycapsule-hero">
 
-            <!-- Background Image in HTML -->
-            <img src="assets/media/hero-banner.jpg" alt="StudyCapsule Banner" class="hero-bg-img">
-
-            <div class="hero-overlay"></div>
 
             <div class="container position-relative">
 
-                <div class="row">
+                <div class="row align-items-center ">
 
                     <div class="col-lg-7">
 
@@ -197,67 +133,72 @@
 
                     </div>
 
-                </div>
+                    <div class="col-lg-5">
 
-            </div>
+                        <div class="orbit-wrapper">
 
-        </section>
-        <!-- Hero Section -->
+                            <div class="orbit-carousel">
 
-        <!-- About Section -->
-        <!-- <section class="about-section my-5">
-            <div class="container">
+                                <!-- Image 1 -->
 
-                <div class="about">
+                                <div class="orbit-card active">
 
-                    <div class="row align-items-center g-5">
+                                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700"
+                                        alt="">
 
-                        <div class="col-lg-5">
-                            <div class="about-icon">
-                                <img src="assets/media/logo.jpeg" alt="">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-7">
-
-                            <span class="section-tag">
-                                About Study Capsule
-                            </span>
-
-                            <h2>
-                                Empowering Students Through Smart Learning
-                            </h2>
-
-                            <p>
-                                At Study Capsule, we help CBSE students of Classes 10 to 12 prepare
-                                smarter with high-quality digital notes and quick-revision mind maps.
-                                Our goal is to simplify learning, strengthen concepts, and support
-                                students in achieving better academic results with confidence.
-                            </p>
-
-                            <div class="features-grid">
-
-                                <div class="feature-item">
-                                    <i class="bi bi-file-earmark-text"></i>
-                                    Detailed Notes
                                 </div>
 
-                                <div class="feature-item">
-                                    <i class="bi bi-diagram-3"></i>
-                                    Quick Mind Maps
+                                <!-- Image 2 -->
+
+                                <div class="orbit-card next">
+
+                                    <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=700"
+                                        alt="">
+
                                 </div>
 
-                                <div class="feature-item">
-                                    <i class="bi bi-patch-question"></i>
-                                    PYQ Collection
+                                <!-- Image 3 -->
+
+                                <div class="orbit-card prev">
+
+                                    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=700"
+                                        alt="">
+
                                 </div>
 
-                                <div class="feature-item">
-                                    <i class="bi bi-lightning-charge"></i>
-                                    Quick Revision
+                                <!-- Image 4 -->
+
+                                <div class="orbit-card">
+
+                                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700"
+                                        alt="">
+
+                                </div>
+
+                                <!-- Image 5 -->
+
+                                <div class="orbit-card">
+
+                                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700"
+                                        alt="">
+
                                 </div>
 
                             </div>
+
+                            <!-- Buttons -->
+
+                            <button class="orbit-btn orbit-prev">
+
+                                <i class="bi bi-chevron-left"></i>
+
+                            </button>
+
+                            <button class="orbit-btn orbit-next">
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
                         </div>
 
@@ -266,8 +207,84 @@
                 </div>
 
             </div>
-        </section> -->
-        <!-- About Section -->
+
+        </section>
+
+
+        <!-- New Section -->
+        <section class="why-study-capsule py-5">
+            <div class="container">
+
+                <div class="section-heading text-center">
+                    
+
+                    <h2>
+                        What separates a 95% scorer from a 70% scorer? Not intelligence habits.
+                    </h2>
+                    <p>Most students don't fall behind because they can't understand a chapter.
+They fall behind because notes are scattered, revision starts too late, and by exam week there's no time left to revise-only to panic.</p>
+
+                </div>
+                <!-- <div class="row g-4 mt-4 ">
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card-index card-blue">
+                            <div class="feature-icon">
+                                01
+                            </div>
+
+                            <h4>Choose pack type</h4>
+
+                            <p>
+                                Nates, Mind Maps, or both
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card-index card-blue">
+                            <div class="feature-icon">
+                                02
+                            </div>
+
+                            <h4>Choose subjects</h4>
+
+                            <p>
+                                Maths, Science, Social Science
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card-index card-blue">
+                            <div class="feature-icon">
+                                03
+                            </div>
+
+                            <h4>Save more</h4>
+
+                            <p>
+                                Bigger bundle, bigger discount
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                </div> -->
+
+
+
+            </div>
+        </section>
+        <!-- New Section -->
+
+
 
         <!-- Subject Cards -->
         <div class="container">
@@ -314,7 +331,7 @@
 
                     <div>
                         <small class="text-muted d-block">
-                            Latest CBSE 
+                            Latest CBSE
                         </small>
 
                         <h6 class="mb-0 fw-bold">
@@ -388,90 +405,26 @@
                 </div>
             </div>
 
-            <!-- <div class="category-data mt-5  p-3 ">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <span class="subject-badge">Class 12</span>
-                    <span class="pdf-count">
-                        <i class="bi bi-file-earmark-pdf"></i>
-                        125 PDFs
-                    </span>
-                </div>
-
-                <h5 class="fw-bold mb-2">
-                    All Subjects Complete Notes
-                </h5>
-
-                <p class="text-muted small mb-3">
-                    NCERT Notes • Chapter Wise PDFs • Important Questions • Revision Material
-                </p>
-
-                <div class="study-features">
-
-                    <span>
-                        <i class="bi bi-journal-text"></i>
-                        25 Chapters
-                    </span>
-
-                    <span>
-                        <i class="bi bi-download"></i>
-                        15K Downloads
-                    </span>
-
-                    <span>
-                        <i class="bi bi-award"></i>
-                        Exam Focused
-                    </span>
-
-                </div>
-
-                <hr>
-
-                <div class="d-flex justify-content-between align-items-center">
-
-                    <div>
-                        <small class="text-muted d-block">
-                            Updated 2026
-                        </small>
-
-                        <h6 class="mb-0 fw-bold">
-                            New Material
-                        </h6>
-                    </div>
-
-                    <div class="card-buttons">
-                        <a href="notes.html" class="btn btn-view">
-                            View All Notes
-                        </a>
-
-                    </div>
-
-                </div>
-            </div> -->
-
         </div>
 
         <!-- Subject Cards -->
 
         <!-- Card Slider  -->
+
+
         <!-- 10th Class -->
         <section class="study-material-section py-5">
             <div class="container">
 
-                <h5 class="package-heading text-center text-uppercase mb-3">
-                    <span class="line-heading"></span>
-                    Notes • PDF Material • Question Banks
-                    <span class="line-heading"></span>
-                </h5>
+
 
                 <div class="section-heading text-center mb-5">
                     <h2>
                         Class 10th Study Material <span>- eBook (PDF)</span>
                     </h2>
 
-                    <p>
-                        Chapter-wise Notes, NCERT Solutions, Important Questions & PDF Downloads
-                    </p>
                 </div>
+
 
 
                 <div class="swiper studyCardsSlider">
@@ -481,6 +434,7 @@
                         <div class="swiper-slide">
 
                             <div class="study-card">
+
 
                                 <div id="physicsCard0" class="carousel slide" data-bs-ride="carousel">
 
@@ -506,7 +460,7 @@
                                     <div class="carousel-inner">
 
                                         <div class="carousel-item active">
-                                            <img src="assets/media/hero-banner.jpg" class="d-block w-100">
+                                            <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
                                         </div>
 
                                         <div class="carousel-item">
@@ -574,8 +528,8 @@
 
                                         <div class="button-group">
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -594,6 +548,7 @@
                         <div class="swiper-slide">
 
                             <div class="study-card">
+
 
                                 <div id="physicsCard1" class="carousel slide" data-bs-ride="carousel">
 
@@ -687,8 +642,8 @@
 
                                         <div class="button-group">
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -708,51 +663,49 @@
 
                             <div class="study-card">
 
-                                <a href="#">
-                                    <div id="physicsCard2" class="carousel slide" data-bs-ride="carousel">
 
-                                        <div class="notes-badge">
-                                            Topper's Choice
+                                <div id="physicsCard2" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="notes-badge">
+                                        Topper's Choice
+                                    </div>
+
+                                    <div class="class-tag">
+                                        Class 10
+                                    </div>
+
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#physicsCard2" data-bs-slide-to="0"
+                                            class="active"></button>
+                                        <button type="button" data-bs-target="#physicsCard2"
+                                            data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#physicsCard2"
+                                            data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#physicsCard2"
+                                            data-bs-slide-to="3"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active">
+                                            <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="class-tag">
-                                            Class 10
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#physicsCard2" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#physicsCard2"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#physicsCard2"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#physicsCard2"
-                                                data-bs-slide-to="3"></button>
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-inner">
-
-                                            <div class="carousel-item active">
-                                                <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
-                                            </div>
-
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
                                         </div>
 
                                     </div>
-                                </a>
 
+                                </div>
                                 <div class="card-body-custom">
 
                                     <h5>CBSE Class 10 Maths Formula Sheet | 2026-27 | Digital E-book (PDF)</h5>
@@ -802,8 +755,8 @@
                                         <div class="button-group">
 
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -823,51 +776,49 @@
 
                             <div class="study-card">
 
-                                <a href="#">
-                                    <div id="physicsCard3" class="carousel slide" data-bs-ride="carousel">
 
-                                        <div class="notes-badge">
-                                            Topper's Choice
+                                <div id="physicsCard3" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="notes-badge">
+                                        Topper's Choice
+                                    </div>
+
+                                    <div class="class-tag">
+                                        Class 10
+                                    </div>
+
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#physicsCard3" data-bs-slide-to="0"
+                                            class="active"></button>
+                                        <button type="button" data-bs-target="#physicsCard3"
+                                            data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#physicsCard3"
+                                            data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#physicsCard3"
+                                            data-bs-slide-to="3"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active">
+                                            <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="class-tag">
-                                            Class 10
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#physicsCard3" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#physicsCard3"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#physicsCard3"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#physicsCard3"
-                                                data-bs-slide-to="3"></button>
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-inner">
-
-                                            <div class="carousel-item active">
-                                                <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
-                                            </div>
-
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
                                         </div>
 
                                     </div>
-                                </a>
 
+                                </div>
                                 <div class="card-body-custom">
 
                                     <h5>CBSE Class 10 Science Mind Maps for 2026-27 Board Exams | Quick Revision PDF
@@ -918,8 +869,8 @@
                                         <div class="button-group">
 
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -939,51 +890,49 @@
 
                             <div class="study-card">
 
-                                <a href="#">
-                                    <div id="physicsCard4" class="carousel slide" data-bs-ride="carousel">
 
-                                        <div class="notes-badge">
-                                            Topper's Choice
+                                <div id="physicsCard4" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="notes-badge">
+                                        Topper's Choice
+                                    </div>
+
+                                    <div class="class-tag">
+                                        Class 10
+                                    </div>
+
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#physicsCard4" data-bs-slide-to="0"
+                                            class="active"></button>
+                                        <button type="button" data-bs-target="#physicsCard4"
+                                            data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#physicsCard4"
+                                            data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#physicsCard4"
+                                            data-bs-slide-to="3"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active">
+                                            <img src="assets/media/hero-banner.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="class-tag">
-                                            Class 10
+                                        <div class="carousel-item">
+                                            <img src="assets/media/hero-banner.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#physicsCard4" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#physicsCard4"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#physicsCard4"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#physicsCard4"
-                                                data-bs-slide-to="3"></button>
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-inner">
-
-                                            <div class="carousel-item active">
-                                                <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
-                                            </div>
-
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
                                         </div>
 
                                     </div>
-                                </a>
 
+                                </div>
                                 <div class="card-body-custom">
 
                                     <h5>CBSE Class 10 Social Science Mind Maps | 2026-27 | Digital E-book (PDF)</h5>
@@ -1033,8 +982,8 @@
                                         <div class="button-group">
 
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -1062,24 +1011,18 @@
         </section>
         <!-- 10th Class -->
 
+
         <!-- 11th Class -->
         <section class="study-material-section py-5">
             <div class="container">
 
-                <h5 class="package-heading text-center text-uppercase mb-3">
-                    <span class="line-heading"></span>
-                    Notes • PDF Material • Question Banks
-                    <span class="line-heading"></span>
-                </h5>
+
 
                 <div class="section-heading text-center mb-5">
                     <h2>
                         Class 11th Study Material <span>- eBook (PDF)</span>
                     </h2>
 
-                    <p>
-                        Chapter-wise Notes, NCERT Solutions, Important Questions & PDF Downloads
-                    </p>
                 </div>
 
                 <h2 class="text-center fw-bold mb-2">
@@ -1094,6 +1037,7 @@
                         <div class="swiper-slide">
 
                             <div class="study-card">
+
 
                                 <div id="physicsCard0" class="carousel slide" data-bs-ride="carousel">
 
@@ -1187,8 +1131,8 @@
 
                                         <div class="button-group">
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -1207,6 +1151,7 @@
                         <div class="swiper-slide">
 
                             <div class="study-card">
+
 
                                 <div id="physicsCard1" class="carousel slide" data-bs-ride="carousel">
 
@@ -1300,8 +1245,8 @@
 
                                         <div class="button-group">
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -1321,51 +1266,49 @@
 
                             <div class="study-card">
 
-                                <a href="#">
-                                    <div id="physicsCard2" class="carousel slide" data-bs-ride="carousel">
 
-                                        <div class="notes-badge">
-                                            Topper's Choice
+                                <div id="physicsCard2" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="notes-badge">
+                                        Topper's Choice
+                                    </div>
+
+                                    <div class="class-tag">
+                                        Class 11
+                                    </div>
+
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#physicsCard2" data-bs-slide-to="0"
+                                            class="active"></button>
+                                        <button type="button" data-bs-target="#physicsCard2"
+                                            data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#physicsCard2"
+                                            data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#physicsCard2"
+                                            data-bs-slide-to="3"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active">
+                                            <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="class-tag">
-                                            Class 11
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#physicsCard2" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#physicsCard2"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#physicsCard2"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#physicsCard2"
-                                                data-bs-slide-to="3"></button>
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-inner">
-
-                                            <div class="carousel-item active">
-                                                <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
-                                            </div>
-
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
                                         </div>
 
                                     </div>
-                                </a>
 
+                                </div>
                                 <div class="card-body-custom">
 
                                     <h5>CBSE Class 11 Maths Formula Sheet | 2026-27 | Digital E-book (PDF)</h5>
@@ -1415,8 +1358,8 @@
                                         <div class="button-group">
 
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -1436,51 +1379,49 @@
 
                             <div class="study-card">
 
-                                <a href="#">
-                                    <div id="physicsCard3" class="carousel slide" data-bs-ride="carousel">
 
-                                        <div class="notes-badge">
-                                            Topper's Choice
+                                <div id="physicsCard3" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="notes-badge">
+                                        Topper's Choice
+                                    </div>
+
+                                    <div class="class-tag">
+                                        Class 11
+                                    </div>
+
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#physicsCard3" data-bs-slide-to="0"
+                                            class="active"></button>
+                                        <button type="button" data-bs-target="#physicsCard3"
+                                            data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#physicsCard3"
+                                            data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#physicsCard3"
+                                            data-bs-slide-to="3"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active">
+                                            <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="class-tag">
-                                            Class 11
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#physicsCard3" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#physicsCard3"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#physicsCard3"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#physicsCard3"
-                                                data-bs-slide-to="3"></button>
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-inner">
-
-                                            <div class="carousel-item active">
-                                                <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
-                                            </div>
-
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
                                         </div>
 
                                     </div>
-                                </a>
 
+                                </div>
                                 <div class="card-body-custom">
 
                                     <h5>CBSE Class 11 Science Mind Maps for 2026-27 Board Exams | Quick Revision PDF
@@ -1531,8 +1472,8 @@
                                         <div class="button-group">
 
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -1552,51 +1493,49 @@
 
                             <div class="study-card">
 
-                                <a href="#">
-                                    <div id="physicsCard4" class="carousel slide" data-bs-ride="carousel">
 
-                                        <div class="notes-badge">
-                                            Topper's Choice
+                                <div id="physicsCard4" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="notes-badge">
+                                        Topper's Choice
+                                    </div>
+
+                                    <div class="class-tag">
+                                        Class 11
+                                    </div>
+
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#physicsCard4" data-bs-slide-to="0"
+                                            class="active"></button>
+                                        <button type="button" data-bs-target="#physicsCard4"
+                                            data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#physicsCard4"
+                                            data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#physicsCard4"
+                                            data-bs-slide-to="3"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active">
+                                            <img src="assets/media/hero-banner.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="class-tag">
-                                            Class 11
+                                        <div class="carousel-item">
+                                            <img src="assets/media/hero-banner.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#physicsCard4" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#physicsCard4"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#physicsCard4"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#physicsCard4"
-                                                data-bs-slide-to="3"></button>
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-inner">
-
-                                            <div class="carousel-item active">
-                                                <img src="assets/media/hero-banner.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/hero-banner.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
-                                            </div>
-
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
                                         </div>
 
                                     </div>
-                                </a>
 
+                                </div>
                                 <div class="card-body-custom">
 
                                     <h5>CBSE Class 11 Social Science Mind Maps | 2026-27 | Digital E-book (PDF)</h5>
@@ -1646,8 +1585,8 @@
                                         <div class="button-group">
 
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -1679,20 +1618,14 @@
         <section class="study-material-section py-5">
             <div class="container">
 
-                <h5 class="package-heading text-center text-uppercase mb-3">
-                    <span class="line-heading"></span>
-                    Notes • PDF Material • Question Banks
-                    <span class="line-heading"></span>
-                </h5>
+
 
                 <div class="section-heading text-center mb-5">
                     <h2>
                         Class 12th Study Material <span>- eBook (PDF)</span>
                     </h2>
 
-                    <p>
-                        Chapter-wise Notes, NCERT Solutions, Important Questions & PDF Downloads
-                    </p>
+
                 </div>
 
 
@@ -1704,6 +1637,7 @@
                         <div class="swiper-slide">
 
                             <div class="study-card">
+
 
                                 <div id="physicsCard0" class="carousel slide" data-bs-ride="carousel">
 
@@ -1797,8 +1731,8 @@
 
                                         <div class="button-group">
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -1817,6 +1751,7 @@
                         <div class="swiper-slide">
 
                             <div class="study-card">
+
 
                                 <div id="physicsCard1" class="carousel slide" data-bs-ride="carousel">
 
@@ -1910,8 +1845,8 @@
 
                                         <div class="button-group">
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -1931,51 +1866,49 @@
 
                             <div class="study-card">
 
-                                <a href="#">
-                                    <div id="physicsCard2" class="carousel slide" data-bs-ride="carousel">
 
-                                        <div class="notes-badge">
-                                            Topper's Choice
+                                <div id="physicsCard2" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="notes-badge">
+                                        Topper's Choice
+                                    </div>
+
+                                    <div class="class-tag">
+                                        Class 12
+                                    </div>
+
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#physicsCard2" data-bs-slide-to="0"
+                                            class="active"></button>
+                                        <button type="button" data-bs-target="#physicsCard2"
+                                            data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#physicsCard2"
+                                            data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#physicsCard2"
+                                            data-bs-slide-to="3"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active">
+                                            <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="class-tag">
-                                            Class 12
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#physicsCard2" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#physicsCard2"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#physicsCard2"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#physicsCard2"
-                                                data-bs-slide-to="3"></button>
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-inner">
-
-                                            <div class="carousel-item active">
-                                                <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
-                                            </div>
-
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
                                         </div>
 
                                     </div>
-                                </a>
 
+                                </div>
                                 <div class="card-body-custom">
 
                                     <h5>CBSE Class 12 Maths Formula Sheet | 2026-27 | Digital E-book (PDF)</h5>
@@ -2025,8 +1958,8 @@
                                         <div class="button-group">
 
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -2046,51 +1979,49 @@
 
                             <div class="study-card">
 
-                                <a href="#">
-                                    <div id="physicsCard3" class="carousel slide" data-bs-ride="carousel">
 
-                                        <div class="notes-badge">
-                                            Topper's Choice
+                                <div id="physicsCard3" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="notes-badge">
+                                        Topper's Choice
+                                    </div>
+
+                                    <div class="class-tag">
+                                        Class 12
+                                    </div>
+
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#physicsCard3" data-bs-slide-to="0"
+                                            class="active"></button>
+                                        <button type="button" data-bs-target="#physicsCard3"
+                                            data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#physicsCard3"
+                                            data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#physicsCard3"
+                                            data-bs-slide-to="3"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active">
+                                            <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="class-tag">
-                                            Class 12
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#physicsCard3" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#physicsCard3"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#physicsCard3"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#physicsCard3"
-                                                data-bs-slide-to="3"></button>
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-inner">
-
-                                            <div class="carousel-item active">
-                                                <img src="assets/media/notes/physics1.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics2.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
-                                            </div>
-
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
                                         </div>
 
                                     </div>
-                                </a>
 
+                                </div>
                                 <div class="card-body-custom">
 
                                     <h5>CBSE Class 12 Science Mind Maps for 2026-27 Board Exams | Quick Revision PDF
@@ -2141,8 +2072,8 @@
                                         <div class="button-group">
 
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -2162,51 +2093,49 @@
 
                             <div class="study-card">
 
-                                <a href="#">
-                                    <div id="physicsCard4" class="carousel slide" data-bs-ride="carousel">
 
-                                        <div class="notes-badge">
-                                            Topper's Choice
+                                <div id="physicsCard4" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="notes-badge">
+                                        Topper's Choice
+                                    </div>
+
+                                    <div class="class-tag">
+                                        Class 12
+                                    </div>
+
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#physicsCard4" data-bs-slide-to="0"
+                                            class="active"></button>
+                                        <button type="button" data-bs-target="#physicsCard4"
+                                            data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#physicsCard4"
+                                            data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#physicsCard4"
+                                            data-bs-slide-to="3"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active">
+                                            <img src="assets/media/hero-banner.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="class-tag">
-                                            Class 12
+                                        <div class="carousel-item">
+                                            <img src="assets/media/hero-banner.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#physicsCard4" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#physicsCard4"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#physicsCard4"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#physicsCard4"
-                                                data-bs-slide-to="3"></button>
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
                                         </div>
 
-                                        <div class="carousel-inner">
-
-                                            <div class="carousel-item active">
-                                                <img src="assets/media/hero-banner.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/hero-banner.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics3.jpg" class="d-block w-100">
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
-                                            </div>
-
+                                        <div class="carousel-item">
+                                            <img src="assets/media/notes/physics4.jpg" class="d-block w-100">
                                         </div>
 
                                     </div>
-                                </a>
 
+                                </div>
                                 <div class="card-body-custom">
 
                                     <h5>CBSE Class 12 Social Science Mind Maps | 2026-27 | Digital E-book (PDF)</h5>
@@ -2256,8 +2185,8 @@
                                         <div class="button-group">
 
 
-                                            <a href="detail.html" class="btn btn-view">
-                                                View Details
+                                            <a href="cart.html" class="btn btn-view">
+                                                Add To Cart
                                             </a>
 
 
@@ -2286,6 +2215,88 @@
         <!-- 12th Class -->
         <!-- Card Slider  -->
 
+        <!-- Build Your Own Study Pack -->
+        <section class="why-study-capsule py-5">
+            <div class="container">
+
+                <div class="section-heading text-center">
+                    
+
+                    <h2>
+                        Build Your Own Study Pack
+                    </h2>
+                    <p>Choose Notes, Mind Maps, or both, Mix Subjects. Pay only for what you need - and save more as you add</p>
+
+                </div>
+                <div class="row g-4 mt-4 ">
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card-index card-blue">
+                            <div class="feature-icon">
+                                01
+                            </div>
+
+                            <h4>Choose pack type</h4>
+
+                            <p>
+                                Nates, Mind Maps, or both
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card-index card-blue">
+                            <div class="feature-icon">
+                                02
+                            </div>
+
+                            <h4>Choose subjects</h4>
+
+                            <p>
+                                Maths, Science, Social Science
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card-index card-blue">
+                            <div class="feature-icon">
+                                03
+                            </div>
+
+                            <h4>Save more</h4>
+
+                            <p>
+                                Bigger bundle, bigger discount
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="invoice-box" ">
+
+                        <i class="bi bi-box-seam-fill"></i>
+
+                        Build My Pack
+
+                    </div>
+
+
+            </div>
+        </section>
+        <!-- Build Your Own Study Pack -->
+
+
         <!-- Why Choose Study Capsule -->
         <section class="why-study-capsule py-5">
             <div class="container">
@@ -2296,13 +2307,9 @@
                     </span>
 
                     <h2>
-                        Why Choose <span>Study Capsule?</span>
+                        Why Choose Study Capsule?
                     </h2>
 
-                    <p>
-                        Smart notes, quick revision resources, and exam-focused study
-                        materials designed specifically for CBSE students.
-                    </p>
                 </div>
                 <div class="row g-4 mt-4">
 
@@ -2456,22 +2463,7 @@
 
                 </div>
 
-                <!-- CTA -->
 
-                <div class="cta-box mt-5 text-center">
-                    <h3>
-                        Ready To Study Smarter?
-                    </h3>
-
-                    <p>
-                        Get premium notes and boost your exam preparation today.
-                    </p>
-
-                    <a href="#" class="cta-btn">
-                        Explore Notes
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
 
             </div>
         </section>
@@ -2491,14 +2483,9 @@
                     </span>
 
                     <h2>
-                        What Our
-                        <span>Students Say</span>
+                        What Our Students Say?
                     </h2>
 
-                    <p>
-                        Thousands of CBSE students trust Study Capsule
-                        for smarter learning and better exam preparation.
-                    </p>
 
                 </div>
 
@@ -2712,7 +2699,7 @@
 
                 <!-- Featured Review -->
 
-                <div class="featured-review mt-5">
+                <!-- <div class="featured-review mt-5">
 
                     <div class="quote-icon">
                         <i class="bi bi-quote"></i>
@@ -2731,7 +2718,7 @@
                         — CBSE Top Performer 2025
                     </div>
 
-                </div>
+                </div> -->
 
 
 
@@ -2739,6 +2726,153 @@
 
         </section>
         <!-- Testimonials -->
+
+
+
+        <!-- HOw You Will GEt YOur Notes -->
+        <section>
+
+            <div class="container ">
+
+                <div class="notes-process p-4">
+
+                    <div class="text-center ">
+
+                        <h2 class="process-title">
+                            How you'll get your notes
+                        </h2>
+
+                        <p class="process-subtitle">
+                            From payment to PDF in under a minute — no waiting, no confusion.
+                        </p>
+
+                    </div>
+
+                    <div class="row justify-content-center align-items-center process-row mt-5">
+
+                        <!-- Step 1 -->
+
+                        <div class="col-lg-2 col-md-3 col-6">
+
+                            <div class="step-card">
+
+                                <div class="step-icon">
+                                    <i class="bi bi-lock-fill"></i>
+                                </div>
+
+                                <h5>Pay securely</h5>
+
+                                <p>
+                                    Via Razorpay — UPI,<br>
+                                    cards, net banking
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-auto d-none d-lg-block">
+
+                            <div class="arrow">
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+
+                        </div>
+
+                        <!-- Step 2 -->
+
+                        <div class="col-lg-2 col-md-3 col-6">
+
+                            <div class="step-card">
+
+                                <div class="step-icon">
+                                    <i class="bi bi-grid"></i>
+                                </div>
+
+                                <h5>Dashboard</h5>
+
+                                <p>
+                                    Login automatically<br>
+                                    after payment
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-auto d-none d-lg-block">
+
+                            <div class="arrow">
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+
+                        </div>
+
+                        <!-- Step 3 -->
+
+                        <div class="col-lg-2 col-md-3 col-6">
+
+                            <div class="step-card">
+
+                                <div class="step-icon">
+                                    <i class="bi bi-folder2-open"></i>
+                                </div>
+
+                                <h5>Downloads</h5>
+
+                                <p>
+                                    Your notes appear<br>
+                                    instantly
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-auto d-none d-lg-block">
+
+                            <div class="arrow">
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+
+                        </div>
+
+                        <!-- Step 4 -->
+
+                        <div class="col-lg-2 col-md-3 col-6">
+
+                            <div class="step-card">
+
+                                <div class="step-icon">
+                                    <i class="bi bi-file-earmark-arrow-down"></i>
+                                </div>
+
+                                <h5>Download PDF</h5>
+
+                                <p>
+                                    Download anytime.<br>
+                                    Link active 24 hrs.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="invoice-box">
+
+                        <i class="bi bi-receipt"></i>
+
+                        Invoice also sent to your Email & WhatsApp
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- How YOu Will Get Yours NOtes  -->
 
         <!-- FAQ's -->
         <section class="faq-section py-5">
@@ -2758,10 +2892,7 @@
                         <span>We've Got Answers</span>
                     </h2>
 
-                    <p>
-                        Everything you need to know about Study Capsule notes,
-                        downloads, access, payments, and exam preparation.
-                    </p>
+
 
                 </div>
 
@@ -2950,6 +3081,7 @@
 
     <!-- Custom Js File -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/new.js"></script>
 
 
 

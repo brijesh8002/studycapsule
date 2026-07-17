@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyCapsule Hero</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS -->
+
+
+
+    <style>
+.orbit-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+    height:600px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.orbit-carousel{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+
+
+.orbit-card{
+
+    position:absolute;
+
+    transition:.8s cubic-bezier(.25,.8,.25,1);
+
+    opacity:0;
+
+    transform:scale(.5);
+
+    pointer-events:none;
+
+}
+
+.orbit-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:40% 60% 55% 45% /
+                   45% 35% 65% 55%;
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.18);
+
+}
+
+
+.orbit-card.active{
+
+    width:340px;
+
+    height:460px;
+
+    left:50%;
+
+    top:50%;
+
+    opacity:1;
+
+    z-index:9;
+
+    pointer-events:auto;
+
+    transform:
+    translate(-50%,-50%)
+    scale(1);
+
+}
+
+.orbit-card.prev{
+
+    width:210px;
+
+    height:290px;
+
+    left:0;
+
+    top:12%;
+
+    opacity:.45;
+
+    filter:blur(1px);
+
+    z-index:4;
+
+    transform:
+    rotate(-18deg)
+    scale(.82);
+
+}
+
+.orbit-card.next{
+
+    width:210px;
+
+    height:290px;
+
+    right:0;
+
+    top:12%;
+
+    opacity:.45;
+
+    filter:blur(1px);
+
+    z-index:4;
+
+    transform:
+    rotate(18deg)
+    scale(.82);
+
+}
+
+
+.orbit-card.hidden{
+
+    opacity:0;
+
+    transform:scale(.4);
+
+}
+
+
+.orbit-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(37,99,235,.18),
+    transparent 70%);
+
+    filter:blur(45px);
+
+    z-index:0;
+
+}
+
+
+.orbit-card.active img:hover{
+
+    transform:scale(1.04);
+
+}
+
+.orbit-card img{
+
+    transition:.5s;
+
+}
+
+
+.orbit-btn{
+
+    position:absolute;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#2563eb;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+    z-index:50;
+
+}
+
+.orbit-btn:hover{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    transform:scale(1.08);
+
+}
+
+.orbit-prev{
+
+    left:20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+.orbit-next{
+
+    right:20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+
+.orbit-card.active{
+
+    animation:floatImage 5s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:
+        translate(-50%,-50%)
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-50%,-50%)
+        translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:
+        translate(-50%,-50%)
+        translateY(0);
+
+    }
+
+}
+
+.orbit-card.prev{
+
+    animation:floatLeft 6s ease-in-out infinite;
+
+}
+
+.orbit-card.next{
+
+    animation:floatRight 6s ease-in-out infinite;
+
+}
+
+@keyframes floatLeft{
+
+    50%{
+
+        transform:
+        rotate(-18deg)
+        translateY(-10px)
+        scale(.82);
+
+    }
+
+}
+
+@keyframes floatRight{
+
+    50%{
+
+        transform:
+        rotate(18deg)
+        translateY(-10px)
+        scale(.82);
+
+    }
+
+}
+
+
+.orbit-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    right:20px;
+
+    bottom:20px;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.08);
+
+    filter:blur(30px);
+
+    z-index:0;
+
+}
+
+
+.orbit-card.active img{
+
+    border:8px solid #fff;
+
+}
+
+.orbit-card.prev img,
+.orbit-card.next img{
+
+    filter:saturate(.75);
+
+}
+
+@media(max-width:1200px){
+
+.orbit-wrapper{
+
+    height:520px;
+
+}
+
+.orbit-card.active{
+
+    width:300px;
+
+    height:410px;
+
+}
+
+.orbit-card.prev,
+.orbit-card.next{
+
+    width:180px;
+
+    height:250px;
+
+}
+
+}
+
+@media(max-width:991px){
+
+.orbit-wrapper{
+
+    height:500px;
+
+}
+
+.orbit-card.active{
+
+    width:280px;
+
+    height:390px;
+
+}
+
+.orbit-card.prev{
+
+    left:20px;
+
+    top:18%;
+
+}
+
+.orbit-card.next{
+
+    right:20px;
+
+    top:18%;
+
+}
+
+}
+
+@media(max-width:767px){
+.orbit-wrapper{
+
+    height:430px;
+
+}
+
+.orbit-card.active{
+
+    width:230px;
+
+    height:320px;
+
+}
+
+.orbit-card.prev,
+.orbit-card.next{
+
+    width:130px;
+
+    height:180px;
+
+    top:12%;
+
+}
+
+.orbit-prev{
+
+    left:0;
+
+}
+
+.orbit-next{
+
+    right:0;
+
+}
+
+}
+
+@media(max-width:575px){
+
+.orbit-wrapper{
+
+    height:360px;
+
+}
+
+.orbit-card.active{
+
+    width:180px;
+
+    height:250px;
+
+}
+
+.orbit-card.prev,
+.orbit-card.next{
+
+    width:100px;
+
+    height:140px;
+
+}
+
+.orbit-btn{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:16px;
+
+}
+
+}
+
+/*=====================================
+SMOOTH
+=====================================*/
+
+.orbit-card,
+.orbit-card img,
+.orbit-btn{
+
+    transition:all .7s cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/* second image behind left */
+
+.orbit-card.prev2{
+
+    width:160px;
+    height:220px;
+
+    left:8%;
+
+    top:42%;
+
+    opacity:.15;
+
+    transform:
+    rotate(-28deg)
+    scale(.65);
+
+    z-index:2;
+
+}
+
+/* second image behind right */
+
+.orbit-card.next2{
+
+    width:160px;
+    height:220px;
+
+    right:8%;
+
+    top:42%;
+
+    opacity:.15;
+
+    transform:
+    rotate(28deg)
+    scale(.65);
+
+    z-index:2;
+
+}
+    </style>
+
+</head>
+
+<body>
+
+<section class="studycapsule-hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- LEFT CONTENT -->
+
+            <div class="col-lg-7">
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        📚 Topper's Choice
+                    </span>
+
+                    <h1>
+                        Exam-Ready Notes at
+                        Your Fingertips!
+                    </h1>
+
+                    <p>
+                        Clear concepts and exam-ready revision notes — all in one place.
+                        Access chapter-wise notes, question banks,
+                        revision material and more.
+                    </p>
+
+                    <div class="hero-search">
+
+                        <input type="text"
+                            placeholder="Search Class & Subject Notes">
+
+                        <button>
+                            Search
+                        </button>
+
+                    </div>
+
+                    <div class="hero-highlights">
+
+                        <div class="highlight-card">
+
+                            <div class="highlight-icon">
+                                <i class="bi bi-journal-richtext"></i>
+                            </div>
+
+                            <div>
+
+                                <h6>10,000+</h6>
+
+                                <span>Notes</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="highlight-card">
+
+                            <div class="highlight-icon">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                            </div>
+
+                            <div>
+
+                                <h6>Quick Revision</h6>
+
+                                <span>Exam Preparation</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="highlight-card">
+
+                            <div class="highlight-icon">
+                                <i class="bi bi-award-fill"></i>
+                            </div>
+
+                            <div>
+
+                                <h6>Exam Focused</h6>
+
+                                <span>Latest Syllabus</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CAROUSEL -->
+
+            <div class="col-lg-5">
+
+                <div class="orbit-wrapper">
+
+                    <div class="orbit-carousel">
+
+                        <!-- Image 1 -->
+
+                        <div class="orbit-card active">
+
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700"
+                                alt="">
+
+                        </div>
+
+                        <!-- Image 2 -->
+
+                        <div class="orbit-card next">
+
+                            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=700"
+                                alt="">
+
+                        </div>
+
+                        <!-- Image 3 -->
+
+                        <div class="orbit-card prev">
+
+                            <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=700"
+                                alt="">
+
+                        </div>
+
+                        <!-- Image 4 -->
+
+                        <div class="orbit-card">
+
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700"
+                                alt="">
+
+                        </div>
+
+                        <!-- Image 5 -->
+
+                        <div class="orbit-card">
+
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700"
+                                alt="">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Buttons -->
+
+                    <button class="orbit-btn orbit-prev">
+
+                        <i class="bi bi-chevron-left"></i>
+
+                    </button>
+
+                    <button class="orbit-btn orbit-next">
+
+                        <i class="bi bi-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const cards = document.querySelectorAll(".orbit-card");
+    const prevBtn = document.querySelector(".orbit-prev");
+    const nextBtn = document.querySelector(".orbit-next");
+    const wrapper = document.querySelector(".orbit-wrapper");
+
+    let current = 0;
+    let autoPlay = null;
+
+    // ==========================
+    // UPDATE CAROUSEL
+    // ==========================
+
+    function updateCarousel() {
+
+        cards.forEach((card, index) => {
+
+            card.className = "orbit-card";
+
+            let offset = (index - current + cards.length) % cards.length;
+
+            switch (offset) {
+
+                case 0:
+                    card.classList.add("active");
+                    break;
+
+                case 1:
+                    card.classList.add("next");
+                    break;
+
+                case 2:
+                    card.classList.add("next2");
+                    break;
+
+                case cards.length - 1:
+                    card.classList.add("prev");
+                    break;
+
+                case cards.length - 2:
+                    card.classList.add("prev2");
+                    break;
+
+                default:
+                    card.classList.add("hidden");
+            }
+
+        });
+
+    }
+
+    // ==========================
+    // NEXT
+    // ==========================
+
+    function nextSlide() {
+
+        current++;
+
+        if (current >= cards.length) {
+
+            current = 0;
+
+        }
+
+        updateCarousel();
+
+    }
+
+    // ==========================
+    // PREVIOUS
+    // ==========================
+
+    function prevSlide() {
+
+        current--;
+
+        if (current < 0) {
+
+            current = cards.length - 1;
+
+        }
+
+        updateCarousel();
+
+    }
+
+    // ==========================
+    // AUTOPLAY
+    // ==========================
+
+    function startAuto() {
+
+        stopAuto();
+
+        autoPlay = setInterval(() => {
+
+            nextSlide();
+
+        }, 5000);
+
+    }
+
+    function stopAuto() {
+
+        if (autoPlay) {
+
+            clearInterval(autoPlay);
+
+            autoPlay = null;
+
+        }
+
+    }
+
+    // ==========================
+    // BUTTONS
+    // ==========================
+
+    if (nextBtn) {
+
+        nextBtn.addEventListener("click", () => {
+
+            nextSlide();
+
+            startAuto();
+
+        });
+
+    }
+
+    if (prevBtn) {
+
+        prevBtn.addEventListener("click", () => {
+
+            prevSlide();
+
+            startAuto();
+
+        });
+
+    }
+
+    // ==========================
+    // PAUSE ON HOVER
+    // ==========================
+
+    if (wrapper) {
+
+        wrapper.addEventListener("mouseenter", stopAuto);
+
+        wrapper.addEventListener("mouseleave", startAuto);
+
+    }
+
+    // ==========================
+    // TOUCH SWIPE
+    // ==========================
+
+    let startX = 0;
+    let endX = 0;
+
+    if (wrapper) {
+
+        wrapper.addEventListener("touchstart", (e) => {
+
+            startX = e.touches[0].clientX;
+
+        });
+
+        wrapper.addEventListener("touchmove", (e) => {
+
+            endX = e.touches[0].clientX;
+
+        });
+
+        wrapper.addEventListener("touchend", () => {
+
+            if (startX - endX > 60) {
+
+                nextSlide();
+
+                startAuto();
+
+            }
+
+            if (endX - startX > 60) {
+
+                prevSlide();
+
+                startAuto();
+
+            }
+
+        });
+
+    }
+
+    // ==========================
+    // START
+    // ==========================
+
+    updateCarousel();
+
+    startAuto();
+
+});
+</script>
+
+</body>
+
+</html>

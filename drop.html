@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Level Dropdown</title>
+
+    <style>
+
+
+
+
+
+
+        /* ================= FIRST LEVEL ================= */
+
+        .drop-main {
+            position: relative;
+            display: inline-block;
+        }
+
+        .drop-main>p {
+            padding: 12px 20px;
+            border-radius: 10px;
+            transition: .3s;
+        }
+
+        .drop-main:hover>p {
+            background: #4f46e5;
+            color: #fff;
+        }
+
+        /* ================= SECOND LEVEL ================= */
+
+        .drop-second {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 230px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+            padding: 10px 0;
+            display: none;
+            animation: fade .25s;
+        }
+
+        .drop-main:hover>.drop-second {
+            display: block;
+        }
+
+        .clasess {
+            position: relative;
+        }
+
+        .clasess>p {
+            padding: 14px 20px;
+            transition: .3s;
+        }
+
+        .clasess:hover>p {
+            background: #f1f4ff;
+            color: #4f46e5;
+        }
+
+        /* ================= THIRD LEVEL ================= */
+
+        .drop-third {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 230px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+            padding: 10px 0;
+            display: none;
+        }
+
+        .clasess:hover>.drop-third {
+            display: block;
+        }
+
+        .classes2 {
+            position: relative;
+        }
+
+        .classes2>p {
+            padding: 14px 20px;
+            transition: .3s;
+        }
+
+        .classes2:hover>p {
+            background: #f1f4ff;
+            color: #4f46e5;
+        }
+
+        /* ================= FOURTH LEVEL ================= */
+
+        .classes2 div {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 220px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+            display: none;
+            overflow: hidden;
+        }
+
+        .classes2:hover>div {
+            display: block;
+        }
+
+        .classes2 div a {
+            display: block;
+            padding: 14px 18px;
+            transition: .3s;
+        }
+
+        .classes2 div a:hover {
+            background: #4f46e5;
+            color: #fff;
+        }
+
+        @keyframes fade {
+
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* Mobile */
+
+        @media(max-width:992px) {
+
+            .drop-second,
+            .drop-third,
+            .classes2 div {
+
+                position: static;
+                width: 100%;
+                display: none;
+                box-shadow: none;
+                border-left: 2px solid #ddd;
+                border-radius: 0;
+                margin-left: 15px;
+            }
+
+            .drop-main:hover>.drop-second,
+            .clasess:hover>.drop-third,
+            .classes2:hover>div {
+
+                display: block;
+            }
+
+            nav {
+                padding: 15px;
+            }
+
+            .drop-main {
+                width: 100%;
+            }
+
+            .drop-main>p,
+            .clasess>p,
+            .classes2>p {
+                padding: 15px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav>
+
+            <div class="drop-main">
+
+                <p>Class 11-12 ▾</p>
+
+                <div class="drop-second">
+
+                    <div class="clasess">
+
+                        <p>Class 11 ▶</p>
+
+                        <div class="drop-third">
+
+                            <div class="classes2">
+
+                                <p>Science ▶</p>
+
+                                <div>
+
+                                    <a href="#">Notes</a>
+                                    <a href="#">Mind Maps</a>
+                                    <a href="#">PYQs</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="classes2">
+
+                                <p>Commerce ▶</p>
+
+                                <div>
+
+                                    <a href="#">Notes</a>
+                                    <a href="#">Mind Maps</a>
+                                    <a href="#">PYQs</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="classes2">
+
+                                <p>Arts ▶</p>
+
+                                <div>
+
+                                    <a href="#">Notes</a>
+                                    <a href="#">Mind Maps</a>
+                                    <a href="#">PYQs</a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="clasess">
+
+                        <p>Class 12 ▶</p>
+
+                        <div class="drop-third">
+
+                            <div class="classes2">
+
+                                <p>Science ▶</p>
+
+                                <div>
+
+                                    <a href="#">Notes</a>
+                                    <a href="#">Mind Maps</a>
+                                    <a href="#">PYQs</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="classes2">
+
+                                <p>Commerce ▶</p>
+
+                                <div>
+
+                                    <a href="#">Notes</a>
+                                    <a href="#">Mind Maps</a>
+                                    <a href="#">PYQs</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="classes2">
+
+                                <p>Arts ▶</p>
+
+                                <div>
+
+                                    <a href="#">Notes</a>
+                                    <a href="#">Mind Maps</a>
+                                    <a href="#">PYQs</a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</body>
+
+</html>
