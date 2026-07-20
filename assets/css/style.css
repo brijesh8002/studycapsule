@@ -429,6 +429,7 @@ a {
   padding: 18px;
 }
 
+
 .card-body-custom h5 {
   font-size: 15px;
 
@@ -437,6 +438,7 @@ a {
   color: var(--dark);
 
   margin-bottom: 8px;
+  transition: .2s ease;
 }
 
 .card-desc {
@@ -478,6 +480,10 @@ a {
 .study-tags i {
   color: var(--primary);
   margin-right: 4px;
+}
+
+.card-body-custom a:hover h5{
+  color: var(--secondary);
 }
 
 /* STATS */
