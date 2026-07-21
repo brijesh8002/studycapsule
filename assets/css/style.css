@@ -4336,6 +4336,15 @@ FINAL CTA
   }
 
   /* product page */
+
+
+  /*  */
+  /*  */
+  /*  */
+
+  .carorev{
+    flex-direction: column-reverse;
+  }
 }
 
 @media (max-width: 768px) {
