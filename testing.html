@@ -16,931 +16,860 @@
 
 
 
-    <style>
-.orbit-wrapper{
+   <style>
+    /* ===============================
+   RESET
+=================================*/
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Inter,sans-serif;
+    background:#f5f7fb;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    border:none;
+    background:none;
+}
+
+/* ===============================
+   NAVBAR
+=================================*/
+
+.navbar{
     position:relative;
+    z-index:1000;
+}
 
-    width:100%;
+.navbar-nav{
+    gap:15px;
+    align-items:center;
+}
 
-    height:600px;
+.nav-link,
+.mega-btn{
+
+    color:#222;
+    font-weight:600;
+    padding:12px 18px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.nav-link:hover,
+.mega-btn:hover{
+
+    background:#f3f6ff;
+
+}
+
+.mega-btn{
 
     display:flex;
-
-    justify-content:center;
-
     align-items:center;
+    gap:8px;
+    cursor:pointer;
 
 }
 
-.orbit-carousel{
+.mega-btn i{
+
+    transition:.3s;
+
+}
+
+.mega-dropdown.active .mega-btn i{
+
+    transform:rotate(180deg);
+
+}
+
+/* ===============================
+   MEGA MENU
+=================================*/
+
+.mega-dropdown{
 
     position:relative;
 
-    width:100%;
-
-    height:100%;
-
 }
 
-
-
-.orbit-card{
+.mega-menu{
 
     position:absolute;
 
-    transition:.8s cubic-bezier(.25,.8,.25,1);
-
-    opacity:0;
-
-    transform:scale(.5);
-
-    pointer-events:none;
-
-}
-
-.orbit-card img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    display:block;
-
-    border-radius:40% 60% 55% 45% /
-                   45% 35% 65% 55%;
-
-    box-shadow:
-
-    0 35px 80px rgba(0,0,0,.18);
-
-}
-
-
-.orbit-card.active{
-
-    width:340px;
-
-    height:460px;
-
-    left:50%;
-
-    top:50%;
-
-    opacity:1;
-
-    z-index:9;
-
-    pointer-events:auto;
-
-    transform:
-    translate(-50%,-50%)
-    scale(1);
-
-}
-
-.orbit-card.prev{
-
-    width:210px;
-
-    height:290px;
+    top:65px;
 
     left:0;
 
-    top:12%;
-
-    opacity:.45;
-
-    filter:blur(1px);
-
-    z-index:4;
-
-    transform:
-    rotate(-18deg)
-    scale(.82);
-
-}
-
-.orbit-card.next{
-
-    width:210px;
-
-    height:290px;
-
-    right:0;
-
-    top:12%;
-
-    opacity:.45;
-
-    filter:blur(1px);
-
-    z-index:4;
-
-    transform:
-    rotate(18deg)
-    scale(.82);
-
-}
-
-
-.orbit-card.hidden{
-
-    opacity:0;
-
-    transform:scale(.4);
-
-}
-
-
-.orbit-wrapper::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:420px;
-
-    height:420px;
-
-    border-radius:50%;
-
-    background:
-
-    radial-gradient(circle,
-    rgba(37,99,235,.18),
-    transparent 70%);
-
-    filter:blur(45px);
-
-    z-index:0;
-
-}
-
-
-.orbit-card.active img:hover{
-
-    transform:scale(1.04);
-
-}
-
-.orbit-card img{
-
-    transition:.5s;
-
-}
-
-
-.orbit-btn{
-
-    position:absolute;
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
+    width:900px;
 
     background:#fff;
 
-    color:#2563eb;
+    border-radius:22px;
 
-    font-size:20px;
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
 
-    cursor:pointer;
+    display:none;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    overflow:hidden;
 
-    transition:.35s;
-
-    z-index:50;
+    animation:fade .25s;
 
 }
 
-.orbit-btn:hover{
+.mega-dropdown.active .mega-menu{
 
-    background:#2563eb;
-
-    color:#fff;
-
-    transform:scale(1.08);
+    display:flex;
 
 }
 
-.orbit-prev{
-
-    left:20px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-}
-
-.orbit-next{
-
-    right:20px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-}
-
-
-.orbit-card.active{
-
-    animation:floatImage 5s ease-in-out infinite;
-
-}
-
-@keyframes floatImage{
-
-    0%{
-
-        transform:
-        translate(-50%,-50%)
-        translateY(0);
-
-    }
-
-    50%{
-
-        transform:
-        translate(-50%,-50%)
-        translateY(-12px);
-
-    }
-
-    100%{
-
-        transform:
-        translate(-50%,-50%)
-        translateY(0);
-
-    }
-
-}
-
-.orbit-card.prev{
-
-    animation:floatLeft 6s ease-in-out infinite;
-
-}
-
-.orbit-card.next{
-
-    animation:floatRight 6s ease-in-out infinite;
-
-}
-
-@keyframes floatLeft{
-
-    50%{
-
-        transform:
-        rotate(-18deg)
-        translateY(-10px)
-        scale(.82);
-
-    }
-
-}
-
-@keyframes floatRight{
-
-    50%{
-
-        transform:
-        rotate(18deg)
-        translateY(-10px)
-        scale(.82);
-
-    }
-
-}
-
-
-.orbit-wrapper::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:180px;
-
-    height:180px;
-
-    right:20px;
-
-    bottom:20px;
-
-    border-radius:50%;
-
-    background:rgba(37,99,235,.08);
-
-    filter:blur(30px);
-
-    z-index:0;
-
-}
-
-
-.orbit-card.active img{
-
-    border:8px solid #fff;
-
-}
-
-.orbit-card.prev img,
-.orbit-card.next img{
-
-    filter:saturate(.75);
-
-}
-
-@media(max-width:1200px){
-
-.orbit-wrapper{
-
-    height:520px;
-
-}
-
-.orbit-card.active{
-
-    width:300px;
-
-    height:410px;
-
-}
-
-.orbit-card.prev,
-.orbit-card.next{
-
-    width:180px;
-
-    height:250px;
-
-}
-
-}
-
-@media(max-width:991px){
-
-.orbit-wrapper{
-
-    height:500px;
-
-}
-
-.orbit-card.active{
-
-    width:280px;
-
-    height:390px;
-
-}
-
-.orbit-card.prev{
-
-    left:20px;
-
-    top:18%;
-
-}
-
-.orbit-card.next{
-
-    right:20px;
-
-    top:18%;
-
-}
-
-}
-
-@media(max-width:767px){
-.orbit-wrapper{
-
-    height:430px;
-
-}
-
-.orbit-card.active{
+/* ===============================
+   LEVEL 1
+=================================*/
+
+.level-one{
 
     width:230px;
 
-    height:320px;
+    background:#f8f9fc;
+
+    border-right:1px solid #ececec;
+
+    display:flex;
+
+    flex-direction:column;
 
 }
 
-.orbit-card.prev,
-.orbit-card.next{
+.level1-btn{
 
-    width:130px;
+    width:100%;
 
-    height:180px;
+    text-align:left;
 
-    top:12%;
+    padding:18px 22px;
 
-}
+    font-size:15px;
 
-.orbit-prev{
+    font-weight:600;
 
-    left:0;
+    cursor:pointer;
 
-}
-
-.orbit-next{
-
-    right:0;
+    transition:.3s;
 
 }
 
-}
+.level1-btn:hover{
 
-@media(max-width:575px){
-
-.orbit-wrapper{
-
-    height:360px;
+    background:#eef4ff;
 
 }
 
-.orbit-card.active{
+.level1-btn.active{
 
-    width:180px;
+    background:#0d6efd;
 
-    height:250px;
-
-}
-
-.orbit-card.prev,
-.orbit-card.next{
-
-    width:100px;
-
-    height:140px;
+    color:#fff;
 
 }
 
-.orbit-btn{
+/* ===============================
+   RIGHT SIDE
+=================================*/
 
-    width:42px;
+.level-two{
 
-    height:42px;
+    flex:1;
 
-    font-size:16px;
-
-}
-
-}
-
-/*=====================================
-SMOOTH
-=====================================*/
-
-.orbit-card,
-.orbit-card img,
-.orbit-btn{
-
-    transition:all .7s cubic-bezier(.22,1,.36,1);
+    padding:25px;
 
 }
 
+/* ===============================
+   PANELS
+=================================*/
 
-/* second image behind left */
+.level-panel{
 
-.orbit-card.prev2{
-
-    width:160px;
-    height:220px;
-
-    left:8%;
-
-    top:42%;
-
-    opacity:.15;
-
-    transform:
-    rotate(-28deg)
-    scale(.65);
-
-    z-index:2;
+    display:none;
 
 }
 
-/* second image behind right */
+.level-panel.active{
 
-.orbit-card.next2{
-
-    width:160px;
-    height:220px;
-
-    right:8%;
-
-    top:42%;
-
-    opacity:.15;
-
-    transform:
-    rotate(28deg)
-    scale(.65);
-
-    z-index:2;
+    display:flex;
 
 }
-    </style>
+
+/* ===============================
+   LEVEL 3
+=================================*/
+
+.level-three{
+
+    width:220px;
+
+    border-right:1px solid #ececec;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.level3-btn{
+
+    width:100%;
+
+    text-align:left;
+
+    padding:15px 18px;
+
+    font-size:15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.level3-btn:hover{
+
+    background:#eef4ff;
+
+}
+
+.level3-btn.active{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+}
+
+/* ===============================
+   LEVEL 4
+=================================*/
+
+.level-four{
+
+    flex:1;
+
+    padding-left:30px;
+
+}
+
+.level4-panel{
+
+    display:none;
+
+}
+
+.level4-panel.active{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+.level4-panel a{
+
+    padding:15px 18px;
+
+    border-radius:12px;
+
+    background:#f7f9fc;
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.level4-panel a:hover{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    transform:translateX(5px);
+
+}
+
+/* ===============================
+   ANIMATION
+=================================*/
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===============================
+   MOBILE BUTTON
+=================================*/
+
+#menuToggle{
+
+    display:none;
+
+}
+
+/* ===============================
+   TABLET
+=================================*/
+
+@media(max-width:991px){
+
+    #menuToggle{
+
+        display:block;
+
+        font-size:30px;
+
+    }
+
+    .navbar-collapse{
+
+        display:none;
+
+        width:100%;
+
+        margin-top:20px;
+
+    }
+
+    .navbar-collapse.show{
+
+        display:block;
+
+    }
+
+    .navbar-nav{
+
+        width:100%;
+
+    }
+
+    .mega-dropdown{
+
+        width:100%;
+
+    }
+
+    .mega-btn{
+
+        width:100%;
+
+        justify-content:space-between;
+
+    }
+
+    .mega-menu{
+
+        position:static;
+
+        width:100%;
+
+        flex-direction:column;
+
+        box-shadow:none;
+
+        margin-top:15px;
+
+    }
+
+    .level-one{
+
+        width:100%;
+
+        border-right:none;
+
+        border-bottom:1px solid #eee;
+
+    }
+
+    .level-two{
+
+        padding:15px;
+
+    }
+
+    .level-panel{
+
+        flex-direction:column;
+
+    }
+
+    .level-three{
+
+        width:100%;
+
+        border:none;
+
+        margin-bottom:20px;
+
+    }
+
+    .level-four{
+
+        padding-left:0;
+
+    }
+
+    .level4-panel.active{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ===============================
+   MOBILE
+=================================*/
+
+@media(max-width:576px){
+
+    .level1-btn,
+
+    .level3-btn{
+
+        font-size:14px;
+
+        padding:15px;
+
+    }
+
+    .level4-panel a{
+
+        padding:14px;
+
+        font-size:14px;
+
+    }
+
+}
+   </style>
 
 </head>
 
 <body>
 
-<section class="studycapsule-hero">
+<!-- Header -->
+
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
 
     <div class="container">
 
-        <div class="row align-items-center">
+        <a class="navbar-brand fw-bold" href="#">
+            Study Capsule
+        </a>
 
-            <!-- LEFT CONTENT -->
+        <button class="navbar-toggler" type="button" id="menuToggle">
+            <i class="bi bi-list"></i>
+        </button>
 
-            <div class="col-lg-7">
+        <div class="navbar-collapse" id="navbarMenu">
 
-                <div class="hero-content">
+            <ul class="navbar-nav ms-auto">
 
-                    <span class="hero-badge">
-                        📚 Topper's Choice
-                    </span>
+                <!-- HOME -->
 
-                    <h1>
-                        Exam-Ready Notes at
-                        Your Fingertips!
-                    </h1>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
 
-                    <p>
-                        Clear concepts and exam-ready revision notes — all in one place.
-                        Access chapter-wise notes, question banks,
-                        revision material and more.
-                    </p>
+                <!-- MEGA MENU -->
 
-                    <div class="hero-search">
+                <li class="nav-item mega-dropdown">
 
-                        <input type="text"
-                            placeholder="Search Class & Subject Notes">
+                    <button class="mega-btn">
 
-                        <button>
-                            Search
-                        </button>
+                        Courses
 
-                    </div>
-
-                    <div class="hero-highlights">
-
-                        <div class="highlight-card">
-
-                            <div class="highlight-icon">
-                                <i class="bi bi-journal-richtext"></i>
-                            </div>
-
-                            <div>
-
-                                <h6>10,000+</h6>
-
-                                <span>Notes</span>
-
-                            </div>
-
-                        </div>
-
-                        <div class="highlight-card">
-
-                            <div class="highlight-icon">
-                                <i class="bi bi-lightning-charge-fill"></i>
-                            </div>
-
-                            <div>
-
-                                <h6>Quick Revision</h6>
-
-                                <span>Exam Preparation</span>
-
-                            </div>
-
-                        </div>
-
-                        <div class="highlight-card">
-
-                            <div class="highlight-icon">
-                                <i class="bi bi-award-fill"></i>
-                            </div>
-
-                            <div>
-
-                                <h6>Exam Focused</h6>
-
-                                <span>Latest Syllabus</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- RIGHT CAROUSEL -->
-
-            <div class="col-lg-5">
-
-                <div class="orbit-wrapper">
-
-                    <div class="orbit-carousel">
-
-                        <!-- Image 1 -->
-
-                        <div class="orbit-card active">
-
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700"
-                                alt="">
-
-                        </div>
-
-                        <!-- Image 2 -->
-
-                        <div class="orbit-card next">
-
-                            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=700"
-                                alt="">
-
-                        </div>
-
-                        <!-- Image 3 -->
-
-                        <div class="orbit-card prev">
-
-                            <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=700"
-                                alt="">
-
-                        </div>
-
-                        <!-- Image 4 -->
-
-                        <div class="orbit-card">
-
-                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700"
-                                alt="">
-
-                        </div>
-
-                        <!-- Image 5 -->
-
-                        <div class="orbit-card">
-
-                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700"
-                                alt="">
-
-                        </div>
-
-                    </div>
-
-                    <!-- Buttons -->
-
-                    <button class="orbit-btn orbit-prev">
-
-                        <i class="bi bi-chevron-left"></i>
+                        <i class="bi bi-chevron-down"></i>
 
                     </button>
 
-                    <button class="orbit-btn orbit-next">
+                    <div class="mega-menu">
 
-                        <i class="bi bi-chevron-right"></i>
+                        <!-- LEFT -->
 
-                    </button>
+                        <div class="level-one">
 
-                </div>
+                            <button class="level1-btn active" data-target="class6">
+                                Class 6-8
+                            </button>
 
-            </div>
+                            <button class="level1-btn" data-target="class9">
+                                Class 9-10
+                            </button>
+
+                            <button class="level1-btn" data-target="class11">
+                                Class 11-12
+                            </button>
+
+                        </div>
+
+                        <!-- RIGHT -->
+
+                        <div class="level-two">
+
+                            <!-- ====================== -->
+
+                            <div class="level-panel active" id="class6">
+
+                                <div class="level-three">
+
+                                    <button class="level3-btn active" data-target="c6">
+                                        Class 6
+                                    </button>
+
+                                    <button class="level3-btn" data-target="c7">
+                                        Class 7
+                                    </button>
+
+                                    <button class="level3-btn" data-target="c8">
+                                        Class 8
+                                    </button>
+
+                                </div>
+
+                                <div class="level-four">
+
+                                    <div class="level4-panel active" id="c6">
+
+                                        <a href="#">Notes</a>
+
+                                        <a href="#">Mind Maps</a>
+
+                                        <a href="#">PYQs</a>
+
+                                        <a href="#">Sample Papers</a>
+
+                                        <a href="#">MCQs</a>
+
+                                    </div>
+
+                                    <div class="level4-panel" id="c7">
+
+                                        <a href="#">Notes</a>
+
+                                        <a href="#">Mind Maps</a>
+
+                                        <a href="#">Important Questions</a>
+
+                                        <a href="#">PYQs</a>
+
+                                    </div>
+
+                                    <div class="level4-panel" id="c8">
+
+                                        <a href="#">Notes</a>
+
+                                        <a href="#">Mind Maps</a>
+
+                                        <a href="#">PYQs</a>
+
+                                        <a href="#">Revision Notes</a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- ====================== -->
+
+                            <div class="level-panel" id="class9">
+
+                                <div class="level-three">
+
+                                    <button class="level3-btn active" data-target="c9">
+
+                                        Class 9
+
+                                    </button>
+
+                                    <button class="level3-btn" data-target="c10">
+
+                                        Class 10
+
+                                    </button>
+
+                                </div>
+
+                                <div class="level-four">
+
+                                    <div class="level4-panel active" id="c9">
+
+                                        <a href="#">Notes</a>
+
+                                        <a href="#">MCQs</a>
+
+                                        <a href="#">Mind Maps</a>
+
+                                        <a href="#">PYQs</a>
+
+                                    </div>
+
+                                    <div class="level4-panel" id="c10">
+
+                                        <a href="#">Notes</a>
+
+                                        <a href="#">Sample Papers</a>
+
+                                        <a href="#">Mind Maps</a>
+
+                                        <a href="#">PYQs</a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- ====================== -->
+
+                            <div class="level-panel" id="class11">
+
+                                <div class="level-three">
+
+                                    <button class="level3-btn active" data-target="science">
+
+                                        Science
+
+                                    </button>
+
+                                    <button class="level3-btn" data-target="commerce">
+
+                                        Commerce
+
+                                    </button>
+
+                                    <button class="level3-btn" data-target="arts">
+
+                                        Arts
+
+                                    </button>
+
+                                </div>
+
+                                <div class="level-four">
+
+                                    <div class="level4-panel active" id="science">
+
+                                        <a href="#">Physics</a>
+
+                                        <a href="#">Chemistry</a>
+
+                                        <a href="#">Biology</a>
+
+                                        <a href="#">Maths</a>
+
+                                    </div>
+
+                                    <div class="level4-panel" id="commerce">
+
+                                        <a href="#">Accounts</a>
+
+                                        <a href="#">Business Studies</a>
+
+                                        <a href="#">Economics</a>
+
+                                    </div>
+
+                                    <div class="level4-panel" id="arts">
+
+                                        <a href="#">History</a>
+
+                                        <a href="#">Political Science</a>
+
+                                        <a href="#">Geography</a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a href="#" class="nav-link">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
 
         </div>
 
     </div>
 
-</section>
+</nav>
 
+<script src="script.js"></script>
+
+
+<!-- Header -->
+
+
+<!--  -->
 <script>
     document.addEventListener("DOMContentLoaded", () => {
 
-    const cards = document.querySelectorAll(".orbit-card");
-    const prevBtn = document.querySelector(".orbit-prev");
-    const nextBtn = document.querySelector(".orbit-next");
-    const wrapper = document.querySelector(".orbit-wrapper");
+    // ===========================
+    // Mobile Navbar Toggle
+    // ===========================
 
-    let current = 0;
-    let autoPlay = null;
+    const menuToggle = document.getElementById("menuToggle");
+    const navbarMenu = document.getElementById("navbarMenu");
 
-    // ==========================
-    // UPDATE CAROUSEL
-    // ==========================
+    if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+            navbarMenu.classList.toggle("show");
+        });
+    }
 
-    function updateCarousel() {
+    // ===========================
+    // Mega Menu Open / Close
+    // ===========================
 
-        cards.forEach((card, index) => {
+    const megaDropdown = document.querySelector(".mega-dropdown");
+    const megaBtn = document.querySelector(".mega-btn");
 
-            card.className = "orbit-card";
+    megaBtn.addEventListener("click", function (e) {
 
-            let offset = (index - current + cards.length) % cards.length;
+        e.stopPropagation();
 
-            switch (offset) {
+        megaDropdown.classList.toggle("active");
 
-                case 0:
-                    card.classList.add("active");
-                    break;
+    });
 
-                case 1:
-                    card.classList.add("next");
-                    break;
+    // ===========================
+    // Close when clicking outside
+    // ===========================
 
-                case 2:
-                    card.classList.add("next2");
-                    break;
+    document.addEventListener("click", function () {
 
-                case cards.length - 1:
-                    card.classList.add("prev");
-                    break;
+        megaDropdown.classList.remove("active");
 
-                case cards.length - 2:
-                    card.classList.add("prev2");
-                    break;
+    });
 
-                default:
-                    card.classList.add("hidden");
-            }
+    document.querySelector(".mega-menu").addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+    });
+
+    // ===========================
+    // LEVEL 1
+    // ===========================
+
+    const level1Btns = document.querySelectorAll(".level1-btn");
+
+    level1Btns.forEach(btn => {
+
+        btn.addEventListener("click", function () {
+
+            level1Btns.forEach(b => b.classList.remove("active"));
+
+            this.classList.add("active");
+
+            const target = this.dataset.target;
+
+            document.querySelectorAll(".level-panel").forEach(panel => {
+
+                panel.classList.remove("active");
+
+            });
+
+            document.getElementById(target).classList.add("active");
+
+        });
+
+    });
+
+    // ===========================
+    // LEVEL 3
+    // ===========================
+
+    function bindLevel3() {
+
+        document.querySelectorAll(".level-panel").forEach(panel => {
+
+            const buttons = panel.querySelectorAll(".level3-btn");
+
+            buttons.forEach(btn => {
+
+                btn.addEventListener("click", function () {
+
+                    buttons.forEach(b => b.classList.remove("active"));
+
+                    this.classList.add("active");
+
+                    const target = this.dataset.target;
+
+                    panel.querySelectorAll(".level4-panel").forEach(item => {
+
+                        item.classList.remove("active");
+
+                    });
+
+                    panel.querySelector("#" + target).classList.add("active");
+
+                });
+
+            });
 
         });
 
     }
 
-    // ==========================
-    // NEXT
-    // ==========================
-
-    function nextSlide() {
-
-        current++;
-
-        if (current >= cards.length) {
-
-            current = 0;
-
-        }
-
-        updateCarousel();
-
-    }
-
-    // ==========================
-    // PREVIOUS
-    // ==========================
-
-    function prevSlide() {
-
-        current--;
-
-        if (current < 0) {
-
-            current = cards.length - 1;
-
-        }
-
-        updateCarousel();
-
-    }
-
-    // ==========================
-    // AUTOPLAY
-    // ==========================
-
-    function startAuto() {
-
-        stopAuto();
-
-        autoPlay = setInterval(() => {
-
-            nextSlide();
-
-        }, 5000);
-
-    }
-
-    function stopAuto() {
-
-        if (autoPlay) {
-
-            clearInterval(autoPlay);
-
-            autoPlay = null;
-
-        }
-
-    }
-
-    // ==========================
-    // BUTTONS
-    // ==========================
-
-    if (nextBtn) {
-
-        nextBtn.addEventListener("click", () => {
-
-            nextSlide();
-
-            startAuto();
-
-        });
-
-    }
-
-    if (prevBtn) {
-
-        prevBtn.addEventListener("click", () => {
-
-            prevSlide();
-
-            startAuto();
-
-        });
-
-    }
-
-    // ==========================
-    // PAUSE ON HOVER
-    // ==========================
-
-    if (wrapper) {
-
-        wrapper.addEventListener("mouseenter", stopAuto);
-
-        wrapper.addEventListener("mouseleave", startAuto);
-
-    }
-
-    // ==========================
-    // TOUCH SWIPE
-    // ==========================
-
-    let startX = 0;
-    let endX = 0;
-
-    if (wrapper) {
-
-        wrapper.addEventListener("touchstart", (e) => {
-
-            startX = e.touches[0].clientX;
-
-        });
-
-        wrapper.addEventListener("touchmove", (e) => {
-
-            endX = e.touches[0].clientX;
-
-        });
-
-        wrapper.addEventListener("touchend", () => {
-
-            if (startX - endX > 60) {
-
-                nextSlide();
-
-                startAuto();
-
-            }
-
-            if (endX - startX > 60) {
-
-                prevSlide();
-
-                startAuto();
-
-            }
-
-        });
-
-    }
-
-    // ==========================
-    // START
-    // ==========================
-
-    updateCarousel();
-
-    startAuto();
+    bindLevel3();
 
 });
 </script>

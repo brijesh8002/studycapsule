@@ -331,9 +331,9 @@
 
                 <!-- Tabs -->
 
-                <ul class="nav product-tabs">
+                <ul class="nav product-tabs " style="display: flex; flex-wrap: nowrap; justify-content: start;">
 
-                    <li class="nav-item">
+                    <li class="nav-item" style="width: auto;">
                         <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#description">
 
                             Description
@@ -341,7 +341,7 @@
                         </button>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" style="width: auto;">
                         <button class="nav-link" data-bs-toggle="tab" data-bs-target="#reviews">
 
                             Reviews (1254)
@@ -349,7 +349,7 @@
                         </button>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" style="width: auto;">
                         <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faqs">
 
                             FAQ's
@@ -1245,22 +1245,6 @@
                         <div class="tab-pane fade" id="faqs">
 
                             <div class="product-content-card">
-
-                                <!-- Heading -->
-
-                                <div class="section-heading text-center">
-
-                                    <span class="subtitle">
-                                        Frequently Asked Questions
-                                    </span>
-
-
-                                </div>
-
-
-
-
-
                                 <!-- Accordion -->
 
                                 <div class="accordion custom-faq" id="faqAccordion">
@@ -2075,27 +2059,7 @@
     <script src="assets/js/script.js"></script>
 
 
-    <script>
-        const imageBox = document.querySelector(".main-product-image");
-        const image = imageBox.querySelector("img");
 
-        imageBox.addEventListener("mousemove", (e) => {
-
-            const rect = imageBox.getBoundingClientRect();
-
-            const x = (e.clientX - rect.left) / rect.width * 100;
-            const y = (e.clientY - rect.top) / rect.height * 100;
-
-            image.style.transformOrigin = `${x}% ${y}%`;
-            image.style.transform = "scale(2.5)";
-        });
-
-        imageBox.addEventListener("mouseleave", () => {
-
-            image.style.transformOrigin = "center";
-            image.style.transform = "scale(1)";
-        });
-    </script>
 
 </body>
 

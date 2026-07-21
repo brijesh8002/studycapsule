@@ -429,7 +429,6 @@ a {
   padding: 18px;
 }
 
-
 .card-body-custom h5 {
   font-size: 15px;
 
@@ -438,7 +437,7 @@ a {
   color: var(--dark);
 
   margin-bottom: 8px;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .card-desc {
@@ -482,7 +481,7 @@ a {
   margin-right: 4px;
 }
 
-.card-body-custom a:hover h5{
+.card-body-custom a:hover h5 {
   color: var(--secondary);
 }
 
@@ -604,7 +603,7 @@ a {
 }
 
 .studyCardsSlider {
-  padding: 10px 0px 45px;
+  padding: 0px 0px 45px;
   overflow: hidden;
 }
 
@@ -1574,7 +1573,6 @@ FINAL CTA
   margin: 0;
   color: var(--text);
 }
-
 
 /* index why choose us */
 
@@ -2837,36 +2835,6 @@ FINAL CTA
   border-radius: 50px;
   font-weight: 600;
 }
-/* 
-.thumb-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.thumb {
-  border: 2px solid transparent;
-  border-radius: 15px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.thumb.active {
-  border-color: var(--primary);
-}
-
-.thumb img {
-  width: 100%;
-}
-
-.product-tag {
-  background: #eef4ff;
-  color: var(--primary);
-  padding: 8px 18px;
-  border-radius: 50px;
-  font-weight: 600;
-} */
 
 /*============================== Testing Zoom Product Detail Page ============================================ */
 
@@ -2937,19 +2905,9 @@ FINAL CTA
   width: 100%;
   max-height: 520px;
   object-fit: contain;
-
   transition: transform 0.25s ease;
-  cursor: zoom-in;
   transform-origin: center center;
 }
-
-/* Flipkart Zoom */
-
-.main-product-image:hover img {
-  transform: scale(2);
-}
-
-/* Badge */
 
 .discount-badge {
   position: absolute;
@@ -4337,12 +4295,11 @@ FINAL CTA
 
   /* product page */
 
-
   /*  */
   /*  */
   /*  */
 
-  .carorev{
+  .carorev {
     flex-direction: column-reverse;
   }
 }
@@ -5477,26 +5434,20 @@ RESPONSIVE
 
   display: block;
 
-  border-radius: 40% 60% 55% 45% / 45% 35% 65% 55%;
+  border-radius: 20px;
 
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.18);
 }
 
 .orbit-card.active {
-  width: 340px;
-
-  height: 460px;
-
+  width: 100%;
+  aspect-ratio: 5/4;
+  object-fit: cover;
+  object-position: center;
   left: 50%;
-
   top: 50%;
-
   opacity: 1;
-
   z-index: 9;
-
   pointer-events: auto;
-
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -5568,56 +5519,6 @@ RESPONSIVE
   transition: 0.5s;
 }
 
-.orbit-btn {
-  position: absolute;
-
-  width: 55px;
-
-  height: 55px;
-
-  border: none;
-
-  border-radius: 50%;
-
-  background: #fff;
-
-  color: #2563eb;
-
-  font-size: 20px;
-
-  cursor: pointer;
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-
-  transition: 0.35s;
-
-  z-index: 50;
-}
-
-.orbit-btn:hover {
-  background: #2563eb;
-
-  color: #fff;
-
-  transform: scale(1.08);
-}
-
-.orbit-prev {
-  left: 20px;
-
-  top: 50%;
-
-  transform: translateY(-50%);
-}
-
-.orbit-next {
-  right: 20px;
-
-  top: 50%;
-
-  transform: translateY(-50%);
-}
-
 .orbit-card.active {
   animation: floatImage 5s ease-in-out infinite;
 }
@@ -5678,9 +5579,7 @@ RESPONSIVE
   z-index: 0;
 }
 
-.orbit-card.active img {
-  border: 8px solid #fff;
-}
+
 
 .orbit-card.prev img,
 .orbit-card.next img {
@@ -5826,311 +5725,245 @@ RESPONSIVE
   z-index: 2;
 }
 
-
-
 /* top Offer Baar */
 /* top Offer Baar */
-        /* Offer Marquee */
-        .offer-marquee {
-            background: var(--secondary);
-            color: #fff;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            border-bottom: 2px solid var(--border);
-            height: 42px;
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: .4px;
-        }
-
-        .offer-track {
-            display: inline-flex;
-            width: max-content;
-            animation: marqueeMove 18s linear infinite;
-        }
-
-        .offer-track span {
-            padding-right: 120px;
-            color: #fff;
-        }
-
-        .offer-track span b {
-            color: var(--primary);
-        }
-
-        .offer-marquee:hover .offer-track {
-            animation-play-state: paused;
-        }
-
-        @keyframes marqueeMove {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        /* Mobile */
-        @media (max-width:768px) {
-            .offer-marquee {
-                height: 38px;
-                font-size: 12px;
-            }
-
-            .offer-track span {
-                padding-right: 80px;
-            }
-        }
-
-
-
-
-
-
-
-
-        /* How You Will Get Your Notes */
-        /* How You Will Get Your Notes */
-        /* How You Will Get Your Notes */
-        /* How You Will Get Your Notes */
-        /* How You Will Get Your Notes */
-
-
-.notes-process{
-
-    background:var(--text);
-
-    color:#fff;
-
-    border-radius:30px;
-
-    overflow:hidden;
-
+/* Offer Marquee */
+.offer-marquee {
+  background: var(--secondary);
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  border-bottom: 2px solid var(--border);
+  height: 42px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
-.process-title{
-
-    font-size:42px;
-
-    font-weight:800;
-
-    margin-bottom:12px;
-
+.offer-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marqueeMove 18s linear infinite;
 }
 
-.process-subtitle{
-
-    color:#cbd5e1;
-
-    font-size:18px;
-
+.offer-track span {
+  padding-right: 120px;
+  color: #fff;
 }
 
-.process-row{
-
-    row-gap:40px;
-
+.offer-track span b {
+  color: var(--primary);
 }
 
-.step-card{
-
-    text-align:center;
-
+.offer-marquee:hover .offer-track {
+  animation-play-state: paused;
 }
 
-.step-icon{
+@keyframes marqueeMove {
+  from {
+    transform: translateX(0);
+  }
 
-    width:82px;
-
-    height:82px;
-
-    margin:auto;
-
-    background:rgba(0,45,118,.8);
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:34px;
-
-    color:#fff;
-
-    margin-bottom:22px;
-
-    transition:.35s;
-
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-.step-card:hover .step-icon{
+/* Mobile */
+@media (max-width: 768px) {
+  .offer-marquee {
+    height: 38px;
+    font-size: 12px;
+  }
 
-    background:var(--secondary);
-
-    color:#000;
-
-    transform:translateY(-8px);
-
+  .offer-track span {
+    padding-right: 80px;
+  }
 }
 
-.step-card h5{
+/* How You Will Get Your Notes */
+/* How You Will Get Your Notes */
+/* How You Will Get Your Notes */
+/* How You Will Get Your Notes */
+/* How You Will Get Your Notes */
 
-    font-size:22px;
+.notes-process {
+  background: var(--primary);
 
-    font-weight:700;
+  color: #fff;
 
-    margin-bottom:10px;
-    cursor: pointer;
+  border-radius: 30px;
 
+  overflow: hidden;
 }
 
-.step-card p{
+.process-title {
+  font-size: 42px;
 
-    color:#cbd5e1;
+  font-weight: 800;
 
-    font-size:15px;
-
-    line-height:1.7;
-    cursor: pointer;
-
+  margin-bottom: 12px;
 }
 
-.arrow{
+.process-subtitle {
+  color: #cbd5e1;
 
-    font-size:28px;
-
-    color:#94a3b8;
-
+  font-size: 18px;
 }
 
-.invoice-box{
+.process-row {
+  row-gap: 40px;
+}
+
+.step-card {
+  text-align: center;
+}
+
+.step-icon {
+  width: 82px;
+
+  height: 82px;
+
+  margin: auto;
+
+  background: var(--secondary);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 34px;
+
+  color: var(--primary);
+
+  margin-bottom: 22px;
+
+  transition: 0.35s;
+}
+
+.step-card h5 {
+  font-size: 22px;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.step-card p {
+  color: #cbd5e1;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 28px;
+
+  color: #94a3b8;
+}
+
+.invoice-box {
   cursor: pointer;
 
-    max-width:620px;
+  max-width: 620px;
 
-    margin:60px auto 0;
+  margin: 60px auto 0;
 
-    background:#1f2937;
+  background: #f7eedf;
 
-    border-radius:16px;
+  border-radius: 16px;
 
-    padding:18px 30px;
+  padding: 18px 30px;
 
-    text-align:center;
+  text-align: center;
 
-    font-size:17px;
+  font-size: 17px;
 
-    color:#dbeafe;
-    transition: .3s ease;
-
+  color: var(--secondary);
+  transition: 0.3s ease;
+  font-weight: bold;
 }
 
-.invoice-box i{
+.invoice-box i {
+  color: var(--secondary);
 
-    color:var(--secondary);
-
-    margin-right:10px;
-
+  margin-right: 10px;
 }
 
-.invoice-box:hover{
+.invoice-box:hover {
   transform: translateY(-5px);
 }
 
-@media(max-width:991px){
+@media (max-width: 991px) {
+  .process-title {
+    font-size: 34px;
+  }
 
-.process-title{
+  .step-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
 
-    font-size:34px;
+  .step-card h5 {
+    font-size: 18px;
+  }
 
+  .invoice-box {
+    margin-top: 40px;
+  }
 }
 
-.step-icon{
+@media (max-width: 576px) {
+  .notes-process {
+    border-radius: 18px;
+  }
 
-    width:70px;
-    height:70px;
-    font-size:28px;
+  .process-title {
+    font-size: 28px;
+  }
 
+  .process-subtitle {
+    font-size: 15px;
+  }
+
+  .step-card {
+    margin-bottom: 10px;
+  }
+
+  .step-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .invoice-box {
+    font-size: 14px;
+
+    padding: 15px;
+  }
 }
-
-.step-card h5{
-
-    font-size:18px;
-
-}
-
-.invoice-box{
-
-    margin-top:40px;
-
-}
-
-}
-
-@media(max-width:576px){
-
-.notes-process{
-
-    border-radius:18px;
-
-}
-
-.process-title{
-
-    font-size:28px;
-
-}
-
-.process-subtitle{
-
-    font-size:15px;
-
-}
-
-.step-card{
-
-    margin-bottom:10px;
-
-}
-
-.step-icon{
-
-    width:65px;
-    height:65px;
-}
-
-.invoice-box{
-
-    font-size:14px;
-
-    padding:15px;
-
-}
-
-}
-
-
-
 
 /* Extra Css */
 
-.new-sec91{
+.new-sec91 {
   background: rgb(150, 150, 235);
   color: white;
 }
-.new-sec92{
-  background: #FFF7DF;
+.new-sec92 {
+  background: #fff7df;
   color: white;
 }
-.new-sec93{
-  background: #E8FFF3;
+.new-sec93 {
+  background: #e8fff3;
   color: white;
 }

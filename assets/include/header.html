@@ -375,3 +375,109 @@
 
 
 <!-- Header -->
+
+
+<!--  -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    // ===============================
+    // FIRST LEVEL
+    // ===============================
+    document.querySelectorAll(".drop-main > .nav-link").forEach(menu => {
+
+        menu.addEventListener("click", function (e) {
+
+            e.stopPropagation();
+
+            const parent = this.parentElement;
+
+            // Close all first level
+            document.querySelectorAll(".drop-main").forEach(item => {
+                if (item !== parent) {
+                    item.classList.remove("active");
+                }
+            });
+
+            parent.classList.toggle("active");
+
+        });
+
+    });
+
+
+
+    // ===============================
+    // SECOND LEVEL
+    // ===============================
+    document.querySelectorAll(".clasess > p").forEach(menu => {
+
+        menu.addEventListener("click", function (e) {
+
+            e.stopPropagation();
+
+            const parent = this.parentElement;
+
+            const wrapper = parent.parentElement;
+
+            wrapper.querySelectorAll(":scope > .clasess").forEach(item => {
+
+                if (item !== parent) {
+                    item.classList.remove("active");
+                }
+
+            });
+
+            parent.classList.toggle("active");
+
+        });
+
+    });
+
+
+
+    // ===============================
+    // THIRD LEVEL
+    // ===============================
+    document.querySelectorAll(".classes2 > p").forEach(menu => {
+
+        menu.addEventListener("click", function (e) {
+
+            e.stopPropagation();
+
+            const parent = this.parentElement;
+
+            const wrapper = parent.parentElement;
+
+            wrapper.querySelectorAll(":scope > .classes2").forEach(item => {
+
+                if (item !== parent) {
+                    item.classList.remove("active");
+                }
+
+            });
+
+            parent.classList.toggle("active");
+
+        });
+
+    });
+
+
+
+    // ===============================
+    // CLOSE WHEN CLICK OUTSIDE
+    // ===============================
+    document.addEventListener("click", () => {
+
+        document.querySelectorAll(".active").forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+    });
+
+});
+</script>
