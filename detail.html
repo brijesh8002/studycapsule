@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,14 +22,14 @@
 
     <!-- Custom Css File -->
     <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/header-footer.css">
+    <link rel="stylesheet" href="assets/css/header-footer.css">
 
 </head>
 
 <body>
 
     <!-- Header -->
-    <header class="edu-header" id="header"></header>
+    <header class="main-header" id="header"></header>
     <!-- Header -->
 
     <main>
@@ -102,7 +103,8 @@
                                                 70% OFF
                                             </span>
 
-                                            <a href="assets/media/main-img.webp"><img src="assets/media/main-img.webp" alt=""></a>
+                                            <a href="assets/media/main-img.webp"><img src="assets/media/main-img.webp"
+                                                    alt=""></a>
 
                                         </div>
 
@@ -723,7 +725,7 @@
                             <!-- Preparation Box -->
                             <div class="exam-preparation-box">
 
-                                <div class="row align-items-center g-4">
+                                <div class="row align-items-end g-4">
 
                                     <div class="col-lg-8">
 
@@ -782,67 +784,65 @@
 
                                         <div class="prep-score-card text-start">
 
+                                            <button class="sample-btn" data-bs-toggle="modal"
+                                                data-bs-target="#sampleModal">
+                                                <i class="bi bi-download me-2"></i>
+                                                Download Sample
+                                            </button>
 
-                                                <form class="sample-form">
+                                        </div>
 
-                                                    <div class="mb-2">
-                                                        <label class="form-label">Full Name</label>
-                                                        <input type="text" class="form-control custom-input"
-                                                            placeholder="Enter your name">
+                                        <div class="modal fade" id="sampleModal" tabindex="-1">
+
+                                            <div class="modal-dialog modal-dialog-centered">
+
+                                                <div class="modal-content rounded-4 border-0 shadow-lg">
+
+                                                    <div class="modal-header border-0">
+
+                                                        <h4 class="fw-bold">
+                                                            Download Sample
+                                                        </h4>
+
+                                                        <button class="btn-close" data-bs-dismiss="modal">
+                                                        </button>
+
                                                     </div>
 
-                                                    <div class="row">
-                                                        <div class="col-6 mb-2">
-                                                            <label class="form-label">Class</label>
-                                                            <select class="form-select custom-input">
-                                                                <option selected>Select</option>
-                                                                <option>Class 6</option>
-                                                                <option>Class 7</option>
-                                                                <option>Class 8</option>
-                                                                <option>Class 9</option>
-                                                                <option>Class 10</option>
-                                                                <option>Class 11</option>
-                                                                <option>Class 12</option>
-                                                            </select>
-                                                        </div>
+                                                    <!-- Modal for Download Sample Pdf -->
+                                                    
 
-                                                        <div class="col-6 mb-3">
-                                                            <label class="form-label">Subject</label>
-                                                            <select class="form-select custom-input">
-                                                                <option selected>Select</option>
-                                                                <option>Mathematics</option>
-                                                                <option>Science</option>
-                                                                <option>Physics</option>
-                                                                <option>Chemistry</option>
-                                                                <option>Biology</option>
-                                                                <option>English</option>
-                                                                <option>Social Science</option>
-                                                            </select>
-                                                        </div>
+                                                    <div class="modal-body">
+
+                                                        <form id="sampleForm">
+
+                                                            <div class="mb-3">
+
+                                                                <label class="form-label fw-semibold">
+
+                                                                    WhatsApp Number
+
+                                                                </label>
+
+                                                                <input type="tel" class="form-control form-control-lg"
+                                                                    id="whatsapp" placeholder="Enter WhatsApp Number"
+                                                                    maxlength="10" required>
+
+                                                            </div>
+
+                                                            <button class="btn search-btn border w-100 py-3">
+
+                                                                Download Sample
+
+                                                            </button>
+
+                                                        </form>
+
                                                     </div>
 
-                                                    <div class="mb-2">
-                                                        <label class="form-label">Mobile Number</label>
-                                                        <input type="tel" class="form-control custom-input"
-                                                            placeholder="Enter mobile number">
-                                                    </div>
+                                                    <!-- Modal for Download Sample Pdf -->
 
-                                                    <div class="mb-2">
-                                                        <label class="form-label">Email Address</label>
-                                                        <input type="email" class="form-control custom-input"
-                                                            placeholder="Enter email address">
-                                                    </div>
-
-                                                </form>
-
-
-
-
-
-                                                <button class="sample-btn">
-                                                    <i class="bi bi-download me-2"></i>
-                                                    Download Sample
-                                                </button>
+                                                </div>
 
                                             </div>
 
@@ -851,186 +851,327 @@
                                     </div>
 
                                 </div>
-                                <!-- Preparation Box -->
 
                             </div>
+                            <!-- Preparation Box -->
 
                         </div>
 
-                        <div class="tab-pane fade" id="reviews">
+                    </div>
 
-                            <div class="product-content-card">
+                    <div class="tab-pane fade" id="reviews">
 
-                                <!-- Review div -->
-                                <div class="reviews-wrapper">
+                        <div class="product-content-card">
 
-                                    <div class="section-title mb-4">
+                            <!-- Review div -->
+                            <div class="reviews-wrapper">
 
-                                        <span></span>
+                                <div class="section-title mb-4">
 
-                                        <h3>
-                                            Student Reviews & Ratings
-                                        </h3>
+                                    <span></span>
+
+                                    <h3>
+                                        Student Reviews & Ratings
+                                    </h3>
+
+                                </div>
+
+                                <div class="row g-4">
+
+                                    <!-- Rating Summary -->
+
+                                    <div class="col-lg-4">
+
+                                        <div class="rating-summary-card">
+
+                                            <h2>4.9</h2>
+
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+
+                                            <p>
+                                                Based on 1,254 Reviews
+                                            </p>
+
+                                            <div class="verified-badge">
+                                                <i class="bi bi-patch-check-fill"></i>
+                                                Verified Purchases
+                                            </div>
+
+                                        </div>
 
                                     </div>
+
+                                    <!-- Rating Breakdown -->
+
+                                    <div class="col-lg-8">
+
+                                        <div class="rating-breakdown-card">
+
+                                            <div class="rating-row">
+
+                                                <span>5 Star</span>
+
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:88%">
+                                                    </div>
+                                                </div>
+
+                                                <strong>88%</strong>
+
+                                            </div>
+
+                                            <div class="rating-row">
+
+                                                <span>4 Star</span>
+
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:8%">
+                                                    </div>
+                                                </div>
+
+                                                <strong>8%</strong>
+
+                                            </div>
+
+                                            <div class="rating-row">
+
+                                                <span>3 Star</span>
+
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:3%">
+                                                    </div>
+                                                </div>
+
+                                                <strong>3%</strong>
+
+                                            </div>
+
+                                            <div class="rating-row">
+
+                                                <span>2 Star</span>
+
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:1%">
+                                                    </div>
+                                                </div>
+
+                                                <strong>1%</strong>
+
+                                            </div>
+
+                                            <div class="rating-row">
+
+                                                <span>1 Star</span>
+
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:.5%">
+                                                    </div>
+                                                </div>
+
+                                                <strong>0%</strong>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- Review div -->
+
+                            <!-- seconnd review -->
+                            <div class="customer-reviews">
+
+                                <div class="review-header">
+
+                                    <h3>Customer Reviews</h3>
+
+                                    <div class="review-count">
+                                        1,254 Reviews
+                                    </div>
+
+                                </div>
+
+                                <!-- Review -->
+
+                                <div class="review-card">
+
+                                    <div class="review-top">
+
+                                        <div class="review-user">
+
+                                            <div class="user-avatar">
+                                                R
+                                            </div>
+
+                                            <div>
+
+                                                <h5>
+                                                    Riya Sharma
+
+                                                    <span class="verified-user">
+                                                        <i class="bi bi-patch-check-fill"></i>
+                                                        Verified Purchase
+                                                    </span>
+
+                                                </h5>
+
+                                                <span class="review-date">
+                                                    12 June 2026
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="review-rating">
+
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+
+                                        </div>
+
+                                    </div>
+
+                                    <h6>
+                                        Excellent Study Material
+                                    </h6>
+
+                                    <p>
+                                        These notes helped me revise the entire syllabus in just
+                                        a few days. Everything is well organized and very easy
+                                        to understand.
+                                    </p>
+
+                                    <div class="review-footer">
+
+                                        <button class="helpful-btn">
+
+                                            <i class="bi bi-hand-thumbs-up"></i>
+
+                                            Helpful (45)
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Review -->
+
+                                <div class="review-card">
+
+                                    <div class="review-top">
+
+                                        <div class="review-user">
+
+                                            <div class="user-avatar">
+                                                A
+                                            </div>
+
+                                            <div>
+
+                                                <h5>
+                                                    Aarav Mehta
+
+                                                    <span class="verified-user">
+                                                        <i class="bi bi-patch-check-fill"></i>
+                                                        Verified Purchase
+                                                    </span>
+
+                                                </h5>
+
+                                                <span class="review-date">
+                                                    07 June 2026
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="review-rating">
+
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+
+                                        </div>
+
+                                    </div>
+
+                                    <h6>
+                                        Worth Every Rupee
+                                    </h6>
+
+                                    <p>
+                                        The formulas, quick revision notes and chapter summary
+                                        sheets are amazing. Highly recommended.
+                                    </p>
+
+                                    <div class="review-footer">
+
+                                        <button class="helpful-btn">
+
+                                            <i class="bi bi-hand-thumbs-up"></i>
+
+                                            Helpful (22)
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- seconnd review -->
+
+                            <!-- Review Form -->
+                            <div class="write-review-section">
+
+                                <div class="review-form-header">
+
+                                    <div>
+
+                                        <span class="review-tag">
+                                            Share Your Experience
+                                        </span>
+
+                                        <h3>
+                                            Write A Review
+                                        </h3>
+
+                                        <p>
+                                            Your feedback helps other students make better decisions.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                <form class="review-form">
 
                                     <div class="row g-4">
 
-                                        <!-- Rating Summary -->
 
-                                        <div class="col-lg-4">
 
-                                            <div class="rating-summary-card">
+                                        <div class="col-12">
 
-                                                <h2>4.9</h2>
+                                            <label>Your Rating</label>
 
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i>
-                                                    <i class="bi bi-star-fill"></i>
-                                                    <i class="bi bi-star-fill"></i>
-                                                    <i class="bi bi-star-fill"></i>
-                                                    <i class="bi bi-star-fill"></i>
-                                                </div>
-
-                                                <p>
-                                                    Based on 1,254 Reviews
-                                                </p>
-
-                                                <div class="verified-badge">
-                                                    <i class="bi bi-patch-check-fill"></i>
-                                                    Verified Purchases
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                        <!-- Rating Breakdown -->
-
-                                        <div class="col-lg-8">
-
-                                            <div class="rating-breakdown-card">
-
-                                                <div class="rating-row">
-
-                                                    <span>5 Star</span>
-
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width:88%">
-                                                        </div>
-                                                    </div>
-
-                                                    <strong>88%</strong>
-
-                                                </div>
-
-                                                <div class="rating-row">
-
-                                                    <span>4 Star</span>
-
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width:8%">
-                                                        </div>
-                                                    </div>
-
-                                                    <strong>8%</strong>
-
-                                                </div>
-
-                                                <div class="rating-row">
-
-                                                    <span>3 Star</span>
-
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width:3%">
-                                                        </div>
-                                                    </div>
-
-                                                    <strong>3%</strong>
-
-                                                </div>
-
-                                                <div class="rating-row">
-
-                                                    <span>2 Star</span>
-
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width:1%">
-                                                        </div>
-                                                    </div>
-
-                                                    <strong>1%</strong>
-
-                                                </div>
-
-                                                <div class="rating-row">
-
-                                                    <span>1 Star</span>
-
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width:.5%">
-                                                        </div>
-                                                    </div>
-
-                                                    <strong>0%</strong>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <!-- Review div -->
-
-                                <!-- seconnd review -->
-                                <div class="customer-reviews">
-
-                                    <div class="review-header">
-
-                                        <h3>Customer Reviews</h3>
-
-                                        <div class="review-count">
-                                            1,254 Reviews
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Review -->
-
-                                    <div class="review-card">
-
-                                        <div class="review-top">
-
-                                            <div class="review-user">
-
-                                                <div class="user-avatar">
-                                                    R
-                                                </div>
-
-                                                <div>
-
-                                                    <h5>
-                                                        Riya Sharma
-
-                                                        <span class="verified-user">
-                                                            <i class="bi bi-patch-check-fill"></i>
-                                                            Verified Purchase
-                                                        </span>
-
-                                                    </h5>
-
-                                                    <span class="review-date">
-                                                        12 June 2026
-                                                    </span>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="review-rating">
+                                            <div class="rating-selector">
 
                                                 <i class="bi bi-star-fill"></i>
                                                 <i class="bi bi-star-fill"></i>
@@ -1042,164 +1183,25 @@
 
                                         </div>
 
-                                        <h6>
-                                            Excellent Study Material
-                                        </h6>
+                                        <div class="col-12">
 
-                                        <p>
-                                            These notes helped me revise the entire syllabus in just
-                                            a few days. Everything is well organized and very easy
-                                            to understand.
-                                        </p>
+                                            <label>Review Title</label>
 
-                                        <div class="review-footer">
-
-                                            <button class="helpful-btn">
-
-                                                <i class="bi bi-hand-thumbs-up"></i>
-
-                                                Helpful (45)
-
-                                            </button>
+                                            <input type="text" class="form-control"
+                                                placeholder="Example: Best Notes For Revision">
 
                                         </div>
 
-                                    </div>
+                                        <div class="col-12">
 
-                                    <!-- Review -->
+                                            <label>Your Review</label>
 
-                                    <div class="review-card">
-
-                                        <div class="review-top">
-
-                                            <div class="review-user">
-
-                                                <div class="user-avatar">
-                                                    A
-                                                </div>
-
-                                                <div>
-
-                                                    <h5>
-                                                        Aarav Mehta
-
-                                                        <span class="verified-user">
-                                                            <i class="bi bi-patch-check-fill"></i>
-                                                            Verified Purchase
-                                                        </span>
-
-                                                    </h5>
-
-                                                    <span class="review-date">
-                                                        07 June 2026
-                                                    </span>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="review-rating">
-
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-
-                                            </div>
+                                            <textarea class="form-control" rows="6"
+                                                placeholder="Write your experience..."></textarea>
 
                                         </div>
 
-                                        <h6>
-                                            Worth Every Rupee
-                                        </h6>
-
-                                        <p>
-                                            The formulas, quick revision notes and chapter summary
-                                            sheets are amazing. Highly recommended.
-                                        </p>
-
-                                        <div class="review-footer">
-
-                                            <button class="helpful-btn">
-
-                                                <i class="bi bi-hand-thumbs-up"></i>
-
-                                                Helpful (22)
-
-                                            </button>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <!-- seconnd review -->
-
-                                <!-- Review Form -->
-                                <div class="write-review-section">
-
-                                    <div class="review-form-header">
-
-                                        <div>
-
-                                            <span class="review-tag">
-                                                Share Your Experience
-                                            </span>
-
-                                            <h3>
-                                                Write A Review
-                                            </h3>
-
-                                            <p>
-                                                Your feedback helps other students make better decisions.
-                                            </p>
-
-                                        </div>
-
-                                    </div>
-
-                                    <form class="review-form">
-
-                                        <div class="row g-4">
-
-
-
-                                            <div class="col-12">
-
-                                                <label>Your Rating</label>
-
-                                                <div class="rating-selector">
-
-                                                    <i class="bi bi-star-fill"></i>
-                                                    <i class="bi bi-star-fill"></i>
-                                                    <i class="bi bi-star-fill"></i>
-                                                    <i class="bi bi-star-fill"></i>
-                                                    <i class="bi bi-star-fill"></i>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="col-12">
-
-                                                <label>Review Title</label>
-
-                                                <input type="text" class="form-control"
-                                                    placeholder="Example: Best Notes For Revision">
-
-                                            </div>
-
-                                            <div class="col-12">
-
-                                                <label>Your Review</label>
-
-                                                <textarea class="form-control" rows="6"
-                                                    placeholder="Write your experience..."></textarea>
-
-                                            </div>
-
-                                            <!-- <div class="col-12">
+                                        <!-- <div class="col-12">
 
                                             <label>Upload Screenshot (Optional)</label>
 
@@ -1221,170 +1223,55 @@
 
                                         </div> -->
 
-                                            <div class="col-12">
+                                        <div class="col-12">
 
-                                                <button type="submit" class="submit-review-btn ">
+                                            <button type="submit" class="submit-review-btn ">
 
-                                                    Submit Review
+                                                Submit Review
 
-                                                </button>
-
-                                            </div>
+                                            </button>
 
                                         </div>
 
-                                    </form>
+                                    </div>
 
-                                </div>
-                                <!-- Review Form -->
+                                </form>
 
                             </div>
+                            <!-- Review Form -->
 
                         </div>
 
-                        <div class="tab-pane fade" id="faqs">
+                    </div>
 
-                            <div class="product-content-card">
-                                <!-- Accordion -->
+                    <div class="tab-pane fade" id="faqs">
 
-                                <div class="accordion custom-faq" id="faqAccordion">
+                        <div class="product-content-card">
+                            <!-- Accordion -->
 
-                                    <!-- FAQ -->
+                            <div class="accordion custom-faq" id="faqAccordion">
 
-                                    <div class="accordion-item faq-item" data-category="notes">
+                                <!-- FAQ -->
 
-                                        <h2 class="accordion-header">
+                                <div class="accordion-item faq-item" data-category="notes">
 
-                                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
-                                                data-bs-target="#faq1">
+                                    <h2 class="accordion-header">
 
-                                                What are Study Capsule Notes?
-                                            </button>
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#faq1">
 
-                                        </h2>
+                                            What are Study Capsule Notes?
+                                        </button>
 
-                                        <div id="faq1" class="accordion-collapse collapse"
-                                            data-bs-parent="#faqAccordion">
+                                    </h2>
 
-                                            <div class="accordion-body">
+                                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
 
-                                                Study Capsule Notes are concise,
-                                                exam-oriented CBSE notes designed
-                                                for quick learning and revision.
+                                        <div class="accordion-body">
 
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!-- FAQ -->
-
-                                    <div class="accordion-item faq-item" data-category="download">
-
-                                        <h2 class="accordion-header">
-
-                                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
-                                                data-bs-target="#faq2">
-
-                                                How do I download purchased notes?
-                                            </button>
-
-                                        </h2>
-
-                                        <div id="faq2" class="accordion-collapse collapse"
-                                            data-bs-parent="#faqAccordion">
-
-                                            <div class="accordion-body">
-
-                                                After successful payment,
-                                                download links are instantly available.
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!-- FAQ -->
-
-                                    <div class="accordion-item faq-item" data-category="payment">
-
-                                        <h2 class="accordion-header">
-
-                                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
-                                                data-bs-target="#faq3">
-
-                                                What payment methods are accepted?
-                                            </button>
-
-                                        </h2>
-
-                                        <div id="faq3" class="accordion-collapse collapse"
-                                            data-bs-parent="#faqAccordion">
-
-                                            <div class="accordion-body">
-
-                                                UPI, Debit Card, Credit Card,
-                                                Net Banking and Wallets.
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!-- FAQ -->
-
-                                    <div class="accordion-item faq-item" data-category="account">
-
-                                        <h2 class="accordion-header">
-
-                                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
-                                                data-bs-target="#faq4">
-
-                                                Do I need an account?
-                                            </button>
-
-                                        </h2>
-
-                                        <div id="faq4" class="accordion-collapse collapse"
-                                            data-bs-parent="#faqAccordion">
-
-                                            <div class="accordion-body">
-
-                                                Yes, an account helps you access
-                                                downloads anytime.
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!-- FAQ -->
-
-                                    <div class="accordion-item faq-item" data-category="notes">
-
-                                        <h2 class="accordion-header">
-
-                                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
-                                                data-bs-target="#faq5">
-
-                                                Are notes updated according to CBSE?
-                                            </button>
-
-                                        </h2>
-
-                                        <div id="faq5" class="accordion-collapse collapse"
-                                            data-bs-parent="#faqAccordion">
-
-                                            <div class="accordion-body">
-
-                                                Yes, notes are updated regularly
-                                                according to the latest CBSE syllabus.
-
-                                            </div>
+                                            Study Capsule Notes are concise,
+                                            exam-oriented CBSE notes designed
+                                            for quick learning and revision.
 
                                         </div>
 
@@ -1392,25 +1279,133 @@
 
                                 </div>
 
+                                <!-- FAQ -->
 
-                                <!-- CTA -->
+                                <div class="accordion-item faq-item" data-category="download">
 
-                                <div class="faq-contact">
+                                    <h2 class="accordion-header">
 
-                                    <h3>
-                                        Still Have Questions?
-                                    </h3>
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#faq2">
 
-                                    <p>
-                                        Our team is here to help you.
-                                    </p>
+                                            How do I download purchased notes?
+                                        </button>
 
-                                    <a href="contact.html" class="faq-contact-btn">
-                                        Contact Support
-                                        <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    </h2>
+
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                        <div class="accordion-body">
+
+                                            After successful payment,
+                                            download links are instantly available.
+
+                                        </div>
+
+                                    </div>
 
                                 </div>
+
+                                <!-- FAQ -->
+
+                                <div class="accordion-item faq-item" data-category="payment">
+
+                                    <h2 class="accordion-header">
+
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#faq3">
+
+                                            What payment methods are accepted?
+                                        </button>
+
+                                    </h2>
+
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                        <div class="accordion-body">
+
+                                            UPI, Debit Card, Credit Card,
+                                            Net Banking and Wallets.
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- FAQ -->
+
+                                <div class="accordion-item faq-item" data-category="account">
+
+                                    <h2 class="accordion-header">
+
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#faq4">
+
+                                            Do I need an account?
+                                        </button>
+
+                                    </h2>
+
+                                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                        <div class="accordion-body">
+
+                                            Yes, an account helps you access
+                                            downloads anytime.
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- FAQ -->
+
+                                <div class="accordion-item faq-item" data-category="notes">
+
+                                    <h2 class="accordion-header">
+
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#faq5">
+
+                                            Are notes updated according to CBSE?
+                                        </button>
+
+                                    </h2>
+
+                                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                        <div class="accordion-body">
+
+                                            Yes, notes are updated regularly
+                                            according to the latest CBSE syllabus.
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CTA -->
+
+                            <div class="faq-contact">
+
+                                <h3>
+                                    Still Have Questions?
+                                </h3>
+
+                                <p>
+                                    Our team is here to help you.
+                                </p>
+
+                                <a href="contact.html" class="faq-contact-btn">
+                                    Contact Support
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
 
                             </div>
 
@@ -1419,6 +1414,8 @@
                     </div>
 
                 </div>
+
+            </div>
         </section>
         <!-- Section 2 -->
 
@@ -1433,7 +1430,7 @@
                         Related Products <span>- eBook (PDF)</span>
                     </h2>
 
-                    
+
                 </div>
 
 
@@ -1446,7 +1443,7 @@
 
                             <div class="study-card">
 
-                                
+
                                 <div id="physicsCard0" class="carousel slide" data-bs-ride="carousel">
 
                                     <div class="notes-badge">
@@ -1493,31 +1490,31 @@
                                 <div class="card-body-custom">
 
                                     <a href="detail.html">
-                                    <h5>CBSE Class 12 Science Exam-Ready Notes | 2026-27 | Digital E-book (PDF)</h5>
+                                        <h5>CBSE Class 12 Science Exam-Ready Notes | 2026-27 | Digital E-book (PDF)</h5>
 
-                                    <p class="card-desc">
-                                        Expert Created Content • Based on Latest CBSE Syllabus
-                                    </p>
+                                        <p class="card-desc">
+                                            Expert Created Content • Based on Latest CBSE Syllabus
+                                        </p>
 
-                                    <div class="study-tags">
+                                        <div class="study-tags">
 
-                                        <span>
-                                            <i class="bi bi-file-earmark-pdf"></i>
-                                            125 PDFs
-                                        </span>
+                                            <span>
+                                                <i class="bi bi-file-earmark-pdf"></i>
+                                                125 PDFs
+                                            </span>
 
-                                        <span>
-                                            <i class="bi bi-journal-text"></i>
-                                            25 Chapters
-                                        </span>
+                                            <span>
+                                                <i class="bi bi-journal-text"></i>
+                                                25 Chapters
+                                            </span>
 
-                                        <span>
-                                            <i class="bi bi-download"></i>
-                                            2k Downloads
-                                        </span>
+                                            <span>
+                                                <i class="bi bi-download"></i>
+                                                2k Downloads
+                                            </span>
 
-                                    </div>
-</a>
+                                        </div>
+                                    </a>
 
                                     <hr>
 
@@ -1562,7 +1559,7 @@
 
                             <div class="study-card">
 
-                                
+
                                 <div id="physicsCard1" class="carousel slide" data-bs-ride="carousel">
 
                                     <div class="notes-badge">
@@ -1607,34 +1604,34 @@
                                 </div>
 
                                 <div class="card-body-custom">
-                                    
+
                                     <a href="detail.html">
 
-                                    <h5>CBSE Class 12 Social Science Notes | 2026-27 | Digital E-book (PDF)</h5>
+                                        <h5>CBSE Class 12 Social Science Notes | 2026-27 | Digital E-book (PDF)</h5>
 
-                                    <p class="card-desc">
-                                        Expert Created Content • Based on Latest CBSE Syllabus
-                                    </p>
+                                        <p class="card-desc">
+                                            Expert Created Content • Based on Latest CBSE Syllabus
+                                        </p>
 
-                                    <div class="study-tags">
+                                        <div class="study-tags">
 
-                                        <span>
-                                            <i class="bi bi-file-earmark-pdf"></i>
-                                            125 PDFs
-                                        </span>
+                                            <span>
+                                                <i class="bi bi-file-earmark-pdf"></i>
+                                                125 PDFs
+                                            </span>
 
-                                        <span>
-                                            <i class="bi bi-journal-text"></i>
-                                            25 Chapters
-                                        </span>
+                                            <span>
+                                                <i class="bi bi-journal-text"></i>
+                                                25 Chapters
+                                            </span>
 
-                                        <span>
-                                            <i class="bi bi-download"></i>
-                                            2k Downloads
-                                        </span>
+                                            <span>
+                                                <i class="bi bi-download"></i>
+                                                2k Downloads
+                                            </span>
 
-                                    </div>
-</a>
+                                        </div>
+                                    </a>
 
                                     <hr>
 
@@ -1680,8 +1677,8 @@
                             <div class="study-card">
 
                                 <a href="#">
-                                    
-                                <div id="physicsCard2" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div id="physicsCard2" class="carousel slide" data-bs-ride="carousel">
 
                                         <div class="notes-badge">
                                             Topper's Choice
@@ -1723,69 +1720,69 @@
                                         </div>
 
                                     </div>
-                                <div class="card-body-custom">
-                                    
-                                    <a href="detail.html">
+                                    <div class="card-body-custom">
 
-                                    <h5>CBSE Class 12 Maths Formula Sheet | 2026-27 | Digital E-book (PDF)</h5>
+                                        <a href="detail.html">
 
-                                    <p class="card-desc">
-                                        Expert Created Content • Based on Latest CBSE Syllabus
-                                    </p>
+                                            <h5>CBSE Class 12 Maths Formula Sheet | 2026-27 | Digital E-book (PDF)</h5>
 
-                                    <div class="study-tags">
+                                            <p class="card-desc">
+                                                Expert Created Content • Based on Latest CBSE Syllabus
+                                            </p>
 
-                                        <span>
-                                            <i class="bi bi-file-earmark-pdf"></i>
-                                            125 PDFs
-                                        </span>
+                                            <div class="study-tags">
 
-                                        <span>
-                                            <i class="bi bi-journal-text"></i>
-                                            25 Chapters
-                                        </span>
+                                                <span>
+                                                    <i class="bi bi-file-earmark-pdf"></i>
+                                                    125 PDFs
+                                                </span>
 
-                                        <span>
-                                            <i class="bi bi-download"></i>
-                                            2k Downloads
-                                        </span>
+                                                <span>
+                                                    <i class="bi bi-journal-text"></i>
+                                                    25 Chapters
+                                                </span>
 
-                                    </div>
-</a>
+                                                <span>
+                                                    <i class="bi bi-download"></i>
+                                                    2k Downloads
+                                                </span>
 
-                                    <hr>
+                                            </div>
+                                        </a>
 
-                                    <div class="card-footer-custom">
-                                        <div class="course-price">
+                                        <hr>
 
-                                            <span class="new-price">
-                                                ₹299
-                                            </span>
+                                        <div class="card-footer-custom">
+                                            <div class="course-price">
 
-                                            <span class="old-price">
-                                                ₹999
-                                            </span>
+                                                <span class="new-price">
+                                                    ₹299
+                                                </span>
 
-                                            <span class="discount">
-                                                70% OFF
-                                            </span>
+                                                <span class="old-price">
+                                                    ₹999
+                                                </span>
+
+                                                <span class="discount">
+                                                    70% OFF
+                                                </span>
+
+                                            </div>
+
+                                            <div class="button-group">
+
+
+                                                <a href="cart.html" class="btn btn-view">
+                                                    Add To Cart
+                                                </a>
+
+
+
+                                            </div>
 
                                         </div>
 
-                                        <div class="button-group">
-
-
-                                            <a href="cart.html" class="btn btn-view">
-                                                Add To Cart
-                                            </a>
-
-
-
-                                        </div>
-
                                     </div>
-
-                                </div>
 
                             </div>
 
@@ -1797,8 +1794,8 @@
                             <div class="study-card">
 
                                 <a href="#">
-                                    
-                                <div id="physicsCard3" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div id="physicsCard3" class="carousel slide" data-bs-ride="carousel">
 
                                         <div class="notes-badge">
                                             Topper's Choice
@@ -1840,70 +1837,71 @@
                                         </div>
 
                                     </div>
-                                <div class="card-body-custom">
-                                    
-                                    <a href="detail.html">
+                                    <div class="card-body-custom">
 
-                                    <h5>CBSE Class 12 Science Mind Maps for 2026-27 Board Exams | Quick Revision PDF
-                                    </h5>
+                                        <a href="detail.html">
 
-                                    <p class="card-desc">
-                                        Expert Created Content • Based on Latest CBSE Syllabus
-                                    </p>
+                                            <h5>CBSE Class 12 Science Mind Maps for 2026-27 Board Exams | Quick Revision
+                                                PDF
+                                            </h5>
 
-                                    <div class="study-tags">
+                                            <p class="card-desc">
+                                                Expert Created Content • Based on Latest CBSE Syllabus
+                                            </p>
 
-                                        <span>
-                                            <i class="bi bi-file-earmark-pdf"></i>
-                                            125 PDFs
-                                        </span>
+                                            <div class="study-tags">
 
-                                        <span>
-                                            <i class="bi bi-journal-text"></i>
-                                            25 Chapters
-                                        </span>
+                                                <span>
+                                                    <i class="bi bi-file-earmark-pdf"></i>
+                                                    125 PDFs
+                                                </span>
 
-                                        <span>
-                                            <i class="bi bi-download"></i>
-                                            2k Downloads
-                                        </span>
+                                                <span>
+                                                    <i class="bi bi-journal-text"></i>
+                                                    25 Chapters
+                                                </span>
 
-                                    </div>
-</a>
+                                                <span>
+                                                    <i class="bi bi-download"></i>
+                                                    2k Downloads
+                                                </span>
 
-                                    <hr>
+                                            </div>
+                                        </a>
 
-                                    <div class="card-footer-custom">
-                                        <div class="course-price">
+                                        <hr>
 
-                                            <span class="new-price">
-                                                ₹299
-                                            </span>
+                                        <div class="card-footer-custom">
+                                            <div class="course-price">
 
-                                            <span class="old-price">
-                                                ₹999
-                                            </span>
+                                                <span class="new-price">
+                                                    ₹299
+                                                </span>
 
-                                            <span class="discount">
-                                                70% OFF
-                                            </span>
+                                                <span class="old-price">
+                                                    ₹999
+                                                </span>
+
+                                                <span class="discount">
+                                                    70% OFF
+                                                </span>
+
+                                            </div>
+
+                                            <div class="button-group">
+
+
+                                                <a href="cart.html" class="btn btn-view">
+                                                    Add To Cart
+                                                </a>
+
+
+
+                                            </div>
 
                                         </div>
 
-                                        <div class="button-group">
-
-
-                                            <a href="cart.html" class="btn btn-view">
-                                                Add To Cart
-                                            </a>
-
-
-
-                                        </div>
-
                                     </div>
-
-                                </div>
 
                             </div>
 
@@ -1915,8 +1913,8 @@
                             <div class="study-card">
 
                                 <a href="#">
-                                    
-                                <div id="physicsCard4" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div id="physicsCard4" class="carousel slide" data-bs-ride="carousel">
 
                                         <div class="notes-badge">
                                             Topper's Choice
@@ -1958,69 +1956,70 @@
                                         </div>
 
                                     </div>
-                                <div class="card-body-custom">
-                                    
-                                    <a href="detail.html">
+                                    <div class="card-body-custom">
 
-                                    <h5>CBSE Class 12 Social Science Mind Maps | 2026-27 | Digital E-book (PDF)</h5>
+                                        <a href="detail.html">
 
-                                    <p class="card-desc">
-                                        Expert Created Content • Based on Latest CBSE Syllabus
-                                    </p>
+                                            <h5>CBSE Class 12 Social Science Mind Maps | 2026-27 | Digital E-book (PDF)
+                                            </h5>
 
-                                    <div class="study-tags">
+                                            <p class="card-desc">
+                                                Expert Created Content • Based on Latest CBSE Syllabus
+                                            </p>
 
-                                        <span>
-                                            <i class="bi bi-file-earmark-pdf"></i>
-                                            125 PDFs
-                                        </span>
+                                            <div class="study-tags">
 
-                                        <span>
-                                            <i class="bi bi-journal-text"></i>
-                                            25 Chapters
-                                        </span>
+                                                <span>
+                                                    <i class="bi bi-file-earmark-pdf"></i>
+                                                    125 PDFs
+                                                </span>
 
-                                        <span>
-                                            <i class="bi bi-download"></i>
-                                            2k Downloads
-                                        </span>
+                                                <span>
+                                                    <i class="bi bi-journal-text"></i>
+                                                    25 Chapters
+                                                </span>
 
-                                    </div>
-</a>
+                                                <span>
+                                                    <i class="bi bi-download"></i>
+                                                    2k Downloads
+                                                </span>
 
-                                    <hr>
+                                            </div>
+                                        </a>
 
-                                    <div class="card-footer-custom">
-                                        <div class="course-price">
+                                        <hr>
 
-                                            <span class="new-price">
-                                                ₹299
-                                            </span>
+                                        <div class="card-footer-custom">
+                                            <div class="course-price">
 
-                                            <span class="old-price">
-                                                ₹999
-                                            </span>
+                                                <span class="new-price">
+                                                    ₹299
+                                                </span>
 
-                                            <span class="discount">
-                                                70% OFF
-                                            </span>
+                                                <span class="old-price">
+                                                    ₹999
+                                                </span>
+
+                                                <span class="discount">
+                                                    70% OFF
+                                                </span>
+
+                                            </div>
+
+                                            <div class="button-group">
+
+
+                                                <a href="cart.html" class="btn btn-view">
+                                                    Add To Cart
+                                                </a>
+
+
+
+                                            </div>
 
                                         </div>
 
-                                        <div class="button-group">
-
-
-                                            <a href="cart.html" class="btn btn-view">
-                                                Add To Cart
-                                            </a>
-
-
-
-                                        </div>
-
                                     </div>
-
-                                </div>
 
                             </div>
 

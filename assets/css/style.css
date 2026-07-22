@@ -708,19 +708,7 @@ a {
   background: transparent;
 }
 
-.search-btn {
-  border: none;
 
-  background: linear-gradient(135deg, var(--primary), #0048b5);
-
-  color: #fff;
-
-  height: 58px;
-
-  padding: 0 28px;
-
-  font-weight: 600;
-}
 
 .search-dropdown {
   width: 100%;
@@ -736,20 +724,7 @@ a {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* .search-category {
 
-        background: #f8fafc;
-
-        padding: 12px 20px;
-
-        font-size: 11px;
-
-        letter-spacing: 1px;
-
-        font-weight: 700;
-
-        color: var(--text);
-    } */
 
 .search-item {
   display: flex;
@@ -5591,11 +5566,7 @@ RESPONSIVE
     height: 520px;
   }
 
-  .orbit-card.active {
-    width: 300px;
 
-    height: 410px;
-  }
 
   .orbit-card.prev,
   .orbit-card.next {
@@ -5610,11 +5581,7 @@ RESPONSIVE
     height: 500px;
   }
 
-  .orbit-card.active {
-    width: 280px;
 
-    height: 390px;
-  }
 
   .orbit-card.prev {
     left: 20px;
@@ -5634,11 +5601,7 @@ RESPONSIVE
     height: 430px;
   }
 
-  .orbit-card.active {
-    width: 230px;
 
-    height: 320px;
-  }
 
   .orbit-card.prev,
   .orbit-card.next {
@@ -5663,11 +5626,7 @@ RESPONSIVE
     height: 360px;
   }
 
-  .orbit-card.active {
-    width: 180px;
 
-    height: 250px;
-  }
 
   .orbit-card.prev,
   .orbit-card.next {
