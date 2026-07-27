@@ -431,7 +431,7 @@ padding:5px 0;
 
   background: var(--secondary);
 
-  color: #000;
+  color: white;
 
   font-weight: 700;
 
@@ -444,8 +444,6 @@ padding:5px 0;
 
 .footer-cta-btn:hover {
   transform: translateY(-3px);
-
-  color: #000;
 }
 
 /* LOGO */
