@@ -5837,7 +5837,7 @@ RESPONSIVE
 
   margin: 60px auto 0;
 
-  background: #f7eedf;
+  background: #eef4ff;
 
   border-radius: 16px;
 
@@ -5847,13 +5847,13 @@ RESPONSIVE
 
   font-size: 17px;
 
-  color: var(--secondary);
+  color: var(--primary);
   transition: 0.3s ease;
   font-weight: bold;
 }
 
 .invoice-box i {
-  color: var(--secondary);
+  color: var(--primary);
 
   margin-right: 10px;
 }
