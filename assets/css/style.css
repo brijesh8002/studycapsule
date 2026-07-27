@@ -4051,6 +4051,8 @@ FINAL CTA
   gap: 10px;
 }
 
+
+
 /* ==================================Add to Cart Page=================================== */
 
 /* =======================================All Pages Responsive Css============================== */
@@ -4309,10 +4311,7 @@ FINAL CTA
 
   /* Common Card Section */
 
-  /* Search Baar */
-  .search-btn {
-    padding: 0 18px;
-  }
+
 
   .search-box input {
     font-size: 14px;
