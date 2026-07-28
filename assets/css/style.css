@@ -84,6 +84,8 @@ a {
   font-weight: 600;
   margin-bottom: 20px;
   cursor: pointer;
+  position: relative;
+  z-index: 999;
 }
 
 .hero-content h1 {
@@ -1485,6 +1487,10 @@ FINAL CTA
 
 .feature-card-index h4 {
   color: var(--primary);
+  font-weight: 700;
+}
+.feature-card-index button {
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -5651,7 +5657,7 @@ RESPONSIVE
 
 /* second image behind left */
 
-.orbit-card.prev2 {
+/* .orbit-card.prev2 {
   width: 160px;
   height: 220px;
 
@@ -5664,11 +5670,11 @@ RESPONSIVE
   transform: rotate(-28deg) scale(0.65);
 
   z-index: 2;
-}
+} */
 
 /* second image behind right */
 
-.orbit-card.next2 {
+/* .orbit-card.next2 {
   width: 160px;
   height: 220px;
 
@@ -5681,7 +5687,7 @@ RESPONSIVE
   transform: rotate(28deg) scale(0.65);
 
   z-index: 2;
-}
+} */
 
 /* top Offer Baar */
 /* top Offer Baar */
